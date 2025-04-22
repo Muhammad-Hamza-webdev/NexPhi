@@ -355,3 +355,62 @@ body:has(#btn-checkbox-search:checked) .top-to-bottom {
     transform: translateY(0);
   }
 }
+
+/* mobile menu button code only */
+#menu-toggle {
+  display: none;
+}
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 40px;
+  height: 24px;
+  cursor: pointer;
+  position: relative;
+  z-index: 100;
+}
+
+.hamburger-line {
+  height: 2px;
+  width: 100%;
+  background: #f1faee;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+#menu-toggle:checked + .hamburger .hamburger-line:nth-child(1) {
+  transform: translateY(11px) rotate(45deg);
+}
+
+#menu-toggle:checked + .hamburger .hamburger-line:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+#menu-toggle:checked + .hamburger .hamburger-line:nth-child(3) {
+  transform: translateY(-11px) rotate(-45deg);
+}
+.hamburger:hover .hamburger-line {
+  background: #ffffff;
+}
+
+/* mobile logo */
+
+.mobile-header {
+  background-color: #111111;
+  position: fixed;
+  width: 100%;
+  padding: 20px 30px;
+  .container {
+    width: 95%;
+    max-width: 1920px;
+    .inner-mobile-header {
+      display: flex;
+      justify-content: space-between;
+      img {
+        width: 35px;
+        height: 35px;
+      }
+    }
+  }
+}

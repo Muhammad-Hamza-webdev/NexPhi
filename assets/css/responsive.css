@@ -1,3 +1,8 @@
+@media (max-width: 1920px) {
+  .mobile-header {
+    display: none;
+  }
+}
 @media (max-width: 1600px) {
   .left-section {
     .main-box {
@@ -8,5 +13,8 @@
 @media (max-width: 1366px) {
   .main-header {
     display: none;
+  }
+  .mobile-header {
+    display: block;
   }
 }
