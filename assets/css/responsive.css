@@ -1,0 +1,12 @@
+@media (max-width: 1600px) {
+  .left-section {
+    .main-box {
+      width: 25%;
+    }
+  }
+}
+@media (max-width: 1366px) {
+  .main-header {
+    display: none;
+  }
+}

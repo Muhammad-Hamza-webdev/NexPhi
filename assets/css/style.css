@@ -48,11 +48,11 @@ button:active {
 }
 /* ================================================= header ================================================ */
 .main-header {
-  /* border: 1px solid black; */
-  height: 200px;
   display: flex;
   justify-content: center;
-  /* background-color: #111111; */
+  background-color: #ffffff;
+  position: fixed;
+  width: 100%;
   .container {
     width: 95%;
     max-width: 1920px;
@@ -123,6 +123,11 @@ button:active {
         display: flex;
         gap: 30px;
         align-items: center;
+        .check-btn {
+          input {
+            display: none;
+          }
+        }
         /* svg */
         svg {
           width: 25px;
@@ -160,7 +165,7 @@ button:active {
     margin: 10px 1px 10px 10px;
     transform: translateX(calc(-100% - 11px));
     transition: transform 0.2s ease-out;
-    padding: 60px 70px;
+    padding: 4% 4%;
     display: flex;
     flex-direction: column;
     gap: 180px;
@@ -273,11 +278,80 @@ button:active {
   }
 }
 
-body:has(#btn-checkbox-main:checked) .left-section {
+body:has(#btn-checkbox-sidebar:checked) .left-section {
   z-index: 3;
 }
 
-body:has(#btn-checkbox-main:checked) .main-box,
-body:has(#btn-checkbox-main:checked) .main-box-sidebar {
+body:has(#btn-checkbox-sidebar:checked) .main-box,
+body:has(#btn-checkbox-sidebar:checked) .main-box-sidebar {
   transform: translateX(0);
+}
+
+/* top to bottom search input box with animations */
+.top-to-bottom {
+  background-color: #31313180;
+  inset: 0;
+  position: fixed;
+  z-index: -1;
+  display: flex;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease, z-index 0.3s step-end;
+  .main-box {
+    display: flex;
+    align-items: center;
+    padding: 35px 40px;
+    height: 16%;
+    background-color: #111111;
+    width: 100%;
+    justify-content: space-between;
+    transform: translateY(-100%);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+    form {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      button {
+        background-image: linear-gradient(90deg, #111111, #111111);
+        svg {
+          width: 30px;
+          height: 30px;
+        }
+      }
+      input {
+        display: flex;
+        width: 90%;
+        background-color: transparent;
+        border: none;
+        padding: 10px 0 10px 20px;
+        color: #ffffff;
+        font-size: 18px;
+        &:focus-visible {
+          outline: none;
+        }
+      }
+    }
+    div {
+      display: flex;
+      cursor: pointer;
+      label svg {
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+      }
+      &:hover svg {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+body:has(#btn-checkbox-search:checked) .top-to-bottom {
+  z-index: 3;
+  opacity: 1;
+  transition: opacity 0.3s ease, z-index 0.3s step-start;
+  .main-box {
+    transform: translateY(0);
+  }
 }

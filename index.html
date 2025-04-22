@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="assets/img/Nexphi.png" />
     <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
     <title>Nexphi</title>
   </head>
   <body>
@@ -12,9 +13,8 @@
     <!-- ===================== Header start ===================== -->
     <!-- ======================================================== -->
 
-    <!-- slide section -->
-
-    <label for="btn-checkbox-main" class="left-section">
+    <!-- slide section start-->
+    <label for="btn-checkbox-sidebar" class="left-section">
       <section class="main-box">
         <a href="#">
           <img src="assets/img/Nexphi.png" alt="Logo" />
@@ -105,14 +105,66 @@
         </div>
       </section>
     </label>
+    <!-- slide section end-->
+
+    <!-- slide search start -->
+    <label for="btn-checkbox-search" class="top-to-bottom">
+      <section class="main-box">
+        <form action="post">
+          <button type="submit">
+            <svg
+              id="Search--Streamline-Carbon"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 16 16"
+              height="16"
+              width="16"
+            >
+              <path
+                d="m14.5 13.79295 -3.77605 -3.77605a5.50885 5.50885 0 1 0 -0.70705 0.70705L13.79295 14.5ZM2 6.5a4.5 4.5 0 1 1 4.5 4.5 4.505 4.505 0 0 1 -4.5 -4.5Z"
+                fill="#ffffff"
+                stroke-width="0.5"
+              ></path>
+              <path
+                id="_Transparent_Rectangle_"
+                d="M0 0h16v16H0Z"
+                fill="none"
+                stroke-width="0.5"
+              ></path>
+            </svg>
+          </button>
+          <input type="text" placeholder="Type Your Search...." />
+        </form>
+        <div>
+          <label for="btn-checkbox-search">
+            <svg
+              id="Close--Streamline-Carbon"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 16 16"
+              height="16"
+              width="16"
+            >
+              <path
+                d="M8.70705 8 12 4.70705 11.29295 4 8 7.29295 4.70715 4 4 4.70705 7.29295 8 4 11.29295 4.70715 12 8 8.70705 11.29295 12 12 11.29295 8.70705 8z"
+                fill="#ffffff"
+                stroke-width="0.5"
+              ></path>
+              <g id="_Transparent_Rectangle_">
+                <path d="M0 0h16v16H0Z" fill="none" stroke-width="0.5"></path>
+              </g>
+            </svg>
+          </label>
+        </div>
+      </section>
+    </label>
+    <!-- slide search end -->
 
     <header class="main-header">
       <div class="container">
         <div class="inner-header">
           <!-- icons -->
           <div class="icon">
-            <label for="btn-checkbox-main" class="check-btn">
-              <input type="checkbox" id="btn-checkbox-main" />
+            <label for="btn-checkbox-sidebar" class="check-btn">
+              <input type="checkbox" id="btn-checkbox-sidebar" />
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -144,25 +196,28 @@
           </nav>
           <!-- search and button -->
           <div class="search-button">
-            <svg
-              id="Search--Streamline-Carbon"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 16 16"
-              height="16"
-              width="16"
-            >
-              <path
-                d="m14.5 13.79295 -3.77605 -3.77605a5.50885 5.50885 0 1 0 -0.70705 0.70705L13.79295 14.5ZM2 6.5a4.5 4.5 0 1 1 4.5 4.5 4.505 4.505 0 0 1 -4.5 -4.5Z"
-                fill="#ffffff"
-                stroke-width="0.5"
-              ></path>
-              <path
-                id="_Transparent_Rectangle_"
-                d="M0 0h16v16H0Z"
-                fill="none"
-                stroke-width="0.5"
-              ></path>
-            </svg>
+            <label for="btn-checkbox-search" class="check-btn">
+              <input type="checkbox" id="btn-checkbox-search" />
+              <svg
+                id="Search--Streamline-Carbon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 16 16"
+                height="16"
+                width="16"
+              >
+                <path
+                  d="m14.5 13.79295 -3.77605 -3.77605a5.50885 5.50885 0 1 0 -0.70705 0.70705L13.79295 14.5ZM2 6.5a4.5 4.5 0 1 1 4.5 4.5 4.505 4.505 0 0 1 -4.5 -4.5Z"
+                  fill="#ffffff"
+                  stroke-width="0.5"
+                ></path>
+                <path
+                  id="_Transparent_Rectangle_"
+                  d="M0 0h16v16H0Z"
+                  fill="none"
+                  stroke-width="0.5"
+                ></path>
+              </svg>
+            </label>
             <!-- button -->
             <button>
               <span class="text">Get in touch</span>
@@ -178,7 +233,7 @@
     <!-- ======================================================== -->
     <!-- ====================== Body start ====================== -->
     <!-- ======================================================== -->
-    <div style="height: 2000px"></div>
+    <div style="height: 2000px; background-color: #fff"></div>
     <!-- ======================================================== -->
     <!-- ======================= Body End ======================= -->
     <!-- ======================================================== -->
