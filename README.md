@@ -4,8 +4,8 @@ Directory structure:
 └── muhammad-hamza-webdev-nexphi/
     ├── README.md
     ├── index.html
-    ├── style.css
     └── assets/
         ├── css/
+        │   ├── responsive.css
         │   └── style.css
         └── img/
