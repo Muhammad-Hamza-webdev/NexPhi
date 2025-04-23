@@ -571,6 +571,9 @@ body:not(:has(#menu-toggle:checked)) {
         .icon {
           flex: 1 1 50%;
           min-width: 300px;
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
           a {
             img {
               width: 30px;
