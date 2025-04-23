@@ -15,6 +15,26 @@
     display: none;
   }
   .mobile-header {
-    display: block;
+    display: unset;
+  }
+  /* seach bar code */
+  .top-to-bottom {
+    .main-box {
+      height: 8%;
+      padding: 0 30px;
+      form {
+        button {
+          min-width: 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .mobile-menu {
+    .mobile-menu-main {
+      width: 80%;
+    }
   }
 }

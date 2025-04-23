@@ -143,7 +143,6 @@ button:active {
 }
 
 /* left section contact details */
-
 .left-section {
   background-color: #31313180;
   inset: 0;
@@ -151,6 +150,11 @@ button:active {
   z-index: -1;
   display: flex;
   overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1),
+    visibility 0.4s, z-index 0.4s step-end;
+
   .main-box {
     opacity: 1;
     width: 20%;
@@ -164,17 +168,19 @@ button:active {
     border-radius: 20px;
     margin: 10px 1px 10px 10px;
     transform: translateX(calc(-100% - 11px));
-    transition: transform 0.2s ease-out;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
     padding: 4% 4%;
     display: flex;
     flex-direction: column;
     gap: 180px;
     position: relative;
     overflow: hidden;
+
     /* logo */
     img {
       width: 40px;
     }
+
     /* info */
     div {
       display: flex;
@@ -203,6 +209,7 @@ button:active {
         }
       }
     }
+
     .get-socials {
       display: flex;
       gap: 40px;
@@ -224,6 +231,7 @@ button:active {
         }
       }
     }
+
     ::after {
       content: "";
       position: absolute;
@@ -239,6 +247,7 @@ button:active {
       mix-blend-mode: darken;
     }
   }
+
   /* second box sidebar */
   .main-box-sidebar {
     width: 4%;
@@ -251,7 +260,7 @@ button:active {
     border-radius: 20px;
     margin: 10px 10px 10px 1px;
     transform: translateX(calc(-100% - 410px));
-    transition: transform 0.2s ease-out;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
     padding: 20px 0 0 0;
     div {
       display: flex;
@@ -278,13 +287,32 @@ button:active {
   }
 }
 
+/* When sidebar is checked */
 body:has(#btn-checkbox-sidebar:checked) .left-section {
   z-index: 3;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1),
+    visibility 0.4s, z-index 0.4s step-start;
+
+  .main-box,
+  .main-box-sidebar {
+    transform: translateX(0);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+  }
 }
 
-body:has(#btn-checkbox-sidebar:checked) .main-box,
-body:has(#btn-checkbox-sidebar:checked) .main-box-sidebar {
-  transform: translateX(0);
+/* When sidebar is being closed */
+body:not(:has(#btn-checkbox-sidebar:checked)) .left-section {
+  .main-box {
+    transform: translateX(calc(-100% - 11px));
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+  }
+
+  .main-box-sidebar {
+    transform: translateX(calc(-100% - 410px));
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+  }
 }
 
 /* top to bottom search input box with animations */
@@ -348,7 +376,7 @@ body:has(#btn-checkbox-sidebar:checked) .main-box-sidebar {
   }
 }
 body:has(#btn-checkbox-search:checked) .top-to-bottom {
-  z-index: 3;
+  z-index: 9;
   opacity: 1;
   transition: opacity 0.3s ease, z-index 0.3s step-start;
   .main-box {
@@ -407,10 +435,118 @@ body:has(#btn-checkbox-search:checked) .top-to-bottom {
     .inner-mobile-header {
       display: flex;
       justify-content: space-between;
+      align-items: center;
       img {
         width: 35px;
         height: 35px;
       }
+    }
+  }
+}
+
+/* mobile menu */
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(49, 49, 49, 0);
+  z-index: -1;
+  opacity: 0;
+  visibility: hidden;
+  transition: background-color 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1),
+    opacity 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1), visibility 0.4s,
+    z-index 0.4s step-end;
+
+  .mobile-menu-main {
+    background-color: #111111;
+    width: 50%;
+    height: 100vh;
+    right: 0;
+    position: absolute;
+    transform: translateX(100%);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+
+    .check-btn {
+      input {
+        display: none;
+      }
+
+      svg {
+        position: absolute;
+        top: 3%;
+        right: 20%;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+      }
+    }
+
+    svg {
+      position: absolute;
+      top: 3%;
+      right: 7%;
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+    }
+
+    div {
+      display: flex;
+      flex-direction: column;
+      padding: 35% 15%;
+      gap: 60px;
+      .navbar-main {
+        ul {
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+          li {
+            list-style: none;
+            a {
+              text-decoration: none;
+              color: #ffffff;
+              font-family: "Manrope", Arial, Helvetica, sans-serif;
+              font-size: 18px;
+              text-transform: capitalize;
+              font-weight: 500;
+              display: inline-block;
+              transition: color 0.2s ease, transform 0.2s ease;
+
+              &:hover {
+                color: #69da18;
+                transform: scale(0.95);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* When menu toggle is checked */
+body:has(#menu-toggle:checked) {
+  .mobile-menu {
+    z-index: 3;
+    opacity: 1;
+    visibility: visible;
+    background-color: rgba(49, 49, 49, 0.5);
+    transition: background-color 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1),
+      opacity 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1), visibility 0.4s,
+      z-index 0.4s step-start;
+
+    .mobile-menu-main {
+      transform: translateX(0);
+      transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+    }
+  }
+}
+
+/* Added this new rule for when menu is being closed */
+body:not(:has(#menu-toggle:checked)) {
+  .mobile-menu {
+    .mobile-menu-main {
+      transform: translateX(100%);
+      transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
     }
   }
 }
