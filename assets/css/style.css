@@ -56,7 +56,7 @@ button:active {
   justify-content: center;
   position: fixed;
   width: 100%;
-
+  z-index: 7;
   .inner-header {
     background-color: #111111;
     margin: 20px 0 0 0;
@@ -237,7 +237,7 @@ button:active {
     width: 20%;
     height: calc(100vh - 20px);
     background: linear-gradient(#1f1f1f, #1f1f1f, #787878),
-      url("../img/sidepanel-bg.png");
+      url("../img/sidepanel-bg.webp");
     background-blend-mode: overlay;
     background-size: contain;
     background-position: bottom center;
@@ -506,6 +506,7 @@ body:has(#btn-checkbox-search:checked) .top-to-bottom {
   position: fixed;
   width: 100%;
   padding: 20px 30px;
+  z-index: 7;
 
   .inner-mobile-header {
     display: flex;
