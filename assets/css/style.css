@@ -813,7 +813,7 @@ body:not(:has(#menu-toggle:checked)) {
   width: 150px;
   max-width: 150px;
   a {
-    padding: 18px 10px 18px 30px;
+    padding: 18px 10px 18px 35px;
     gap: 10px;
     display: flex;
     align-items: center;
@@ -841,7 +841,7 @@ body:not(:has(#menu-toggle:checked)) {
       display: block;
     }
     &:hover {
-      padding: 18px 10px 18px 30px;
+      padding: 18px 10px 18px 40px;
     }
   }
 }
