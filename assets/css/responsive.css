@@ -9,6 +9,21 @@
       width: 25%;
     }
   }
+
+  /* ================================================================hero section======================================= */
+  .hero-section {
+    .container {
+      .inner-hero-section {
+        h1 {
+          font-size: 70px;
+          padding: 0 12%;
+        }
+        p {
+          padding: 0 25%;
+        }
+      }
+    }
+  }
 }
 @media (max-width: 1366px) {
   .main-header {
@@ -25,6 +40,21 @@
       form {
         button {
           min-width: 0;
+        }
+      }
+    }
+
+    /* ================================================================hero section======================================= */
+    .hero-section {
+      .container {
+        .inner-hero-section {
+          h1 {
+            font-size: 60px;
+            padding: 0 11%;
+          }
+          p {
+            padding: 0 21%;
+          }
         }
       }
     }
@@ -68,6 +98,21 @@
       }
     }
   }
+  /* ================================================================hero section======================================= */
+  .hero-section {
+    padding: 160px 0 50px 0;
+    .container {
+      .inner-hero-section {
+        h1 {
+          font-size: 50px;
+          padding: 0;
+        }
+        p {
+          padding: 0 2%;
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 550px) {
@@ -95,7 +140,20 @@
       }
     }
   }
-
+  /* ================================================================hero section======================================= */
+  .hero-section {
+    .container {
+      .inner-hero-section {
+        h1 {
+          font-size: 40px;
+          padding: 0;
+        }
+        p {
+          padding: 0 2%;
+        }
+      }
+    }
+  }
   /* footer second part */
   .footer-second-part {
     margin-top: -60px;
