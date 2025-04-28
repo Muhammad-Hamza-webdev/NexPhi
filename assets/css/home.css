@@ -9,6 +9,18 @@
   width: 95%;
   max-width: 1920px;
 }
+/* scroll animation class */
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  will-change: opacity, transform;
+}
+
+.scroll-animate.active {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 /* ================================================================hero section======================================= */
 .hero-section {
@@ -221,9 +233,9 @@
     display: flex;
     justify-content: center;
     .inner-about-section {
-      width: 800px;
+      width: 750px;
       color: #ffffff;
-      span {
+      & > span {
         font-family: "Manrope", Arial, Helvetica, sans-serif;
         font-size: 16px;
         font-weight: 500;

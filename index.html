@@ -8,10 +8,7 @@
     <link rel="stylesheet" href="assets/css/home.css" />
     <link rel="stylesheet" href="assets/css/responsive.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
+
     <title>Nexphi</title>
   </head>
   <body>
@@ -448,25 +445,23 @@
       <div class="showcase-section">
         <div class="showcase">
           <!-- achievement -->
-          <div class="achievement animate__animated animate__fadeInUp">
+          <div class="achievement scroll-animate">
             <span>Achievements of our startup</span>
           </div>
           <!-- NexPhi -->
           <div class="nexphi">
-            <div class="first animate__animated animate__fadeInUp">
+            <div class="first scroll-animate">
               <span class="rotate">NexPhi</span>
             </div>
-            <div
-              class="second animate__animated animate__fadeInUp animate__delay-1s"
-            >
+            <div class="second scroll-animate">
               <h6>150 K</h6>
               <span>Active users every day</span>
             </div>
           </div>
           <!-- professional -->
           <div class="professional">
-            <div class="humanbrain animate__animated animate__fadeInUp"></div>
-            <div class="animate__animated animate__fadeInUp animate__delay-1s">
+            <div class="humanbrain scroll-animate"></div>
+            <div class="scroll-animate">
               <span> Professional team & tech </span>
             </div>
           </div>
@@ -475,16 +470,12 @@
             <img
               src="assets/img/redd-kmQcQ-unsplash-2-min.webp"
               alt=""
-              class="animate__animated animate__fadeInUp"
+              class="scroll-animate"
             />
-            <img
-              src="assets/img/cover-bg.webp"
-              alt=""
-              class="animate__animated animate__fadeInUp animate__delay-1s"
-            />
+            <img src="assets/img/cover-bg.webp" alt="" class="scroll-animate" />
           </div>
           <!-- programming -->
-          <div class="programming animate__animated animate__fadeInUp">
+          <div class="programming scroll-animate">
             <span> Programming & development </span>
             <img src="assets/img/Layer_1.webp" alt="" />
           </div>
@@ -496,7 +487,7 @@
 
     <section class="partner">
       <div class="container">
-        <div class="partner-slider animate__animated animate__fadeInUp">
+        <div class="partner-slider">
           <img src="assets/img/partners_1.png" alt="Partner" />
           <img src="assets/img/partners_2.png" alt="Partner" />
           <img src="assets/img/partners_3.png" alt="Partner" />
@@ -512,9 +503,9 @@
       <div class="container">
         <div class="inner-about-section">
           <span>/ about us /</span>
-          <h2 class="animate-text">
+          <h2 class="animation-text-two">
             Expert ai consulting for transformative business solutions with
-            Neuros
+            Nexphi
           </h2>
           <p>
             Artificial Intelligence refers to the development of computer
@@ -608,4 +599,24 @@
   </body>
 
   <script src="assets/js/home-gsap-animation.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.intersectionRatio >= 0.5) {
+              entry.target.classList.add("active");
+            }
+          });
+        },
+        {
+          threshold: 0.5,
+        }
+      );
+
+      document.querySelectorAll(".scroll-animate").forEach((el) => {
+        observer.observe(el);
+      });
+    });
+  </script>
 </html>
