@@ -601,7 +601,7 @@ body:has(#btn-checkbox-search:checked) .top-to-bottom {
 /* When menu toggle is checked */
 body:has(#menu-toggle:checked) {
   .mobile-menu {
-    z-index: 3;
+    z-index: 8;
     opacity: 1;
     visibility: visible;
     background-color: rgba(49, 49, 49, 0.5);

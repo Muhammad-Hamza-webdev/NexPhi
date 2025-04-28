@@ -9,6 +9,7 @@
   width: 95%;
   max-width: 1920px;
 }
+
 /* ================================================================hero section======================================= */
 .hero-section {
   background-color: #111111;
@@ -50,15 +51,14 @@
   flex-wrap: wrap;
   align-items: end;
   justify-content: center;
-  gap: 20px;
-  /* achievement section */
+  gap: 1%;
   .achievement {
     background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
       url("../img/Ooze-40-1-min.webp");
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
-    width: 360px;
+    width: 19%;
     height: 570px;
     border-radius: 20px;
     padding: 30px 150px 30px 30px;
@@ -76,13 +76,13 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+    width: 19%;
     .first {
       background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
         url("../img/pensive-bearded-background-1-min.webp");
       background-position: center center;
       background-size: cover;
       background-repeat: no-repeat;
-      width: 360px;
       height: 505px;
       overflow: hidden;
       border-radius: 20px;
@@ -103,7 +103,6 @@
     .second {
       background-color: #048bc5;
       border-radius: 20px;
-      width: 360px;
       height: 275px;
       padding: 30px;
       h6 {
@@ -125,13 +124,13 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+    width: 19%;
     .humanbrain {
       background-image: url("../img/human-brain-poly-brain-2-min.webp");
       background-position: bottom center;
       background-size: contain;
       background-repeat: no-repeat;
       border-radius: 20px;
-      width: 360px;
       height: 275px;
       background-color: #ced6dc;
     }
@@ -141,7 +140,6 @@
       background-size: cover;
       background-repeat: no-repeat;
       border-radius: 20px;
-      width: 360px;
       height: 375px;
       padding: 30px 150px 30px 30px;
       display: flex;
@@ -159,14 +157,13 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+    width: 19%;
     img:nth-child(1) {
       border-radius: 20px;
       object-fit: cover;
-      width: 360px;
       height: 500px;
     }
     img:nth-child(2) {
-      width: 360px;
       height: 230px;
       object-fit: cover;
       border-radius: 20px;
@@ -178,10 +175,10 @@
     flex-direction: column;
     justify-content: space-between;
     background-color: #048bc5;
-    width: 360px;
+    width: 19%;
     height: 565px;
     border-radius: 20px;
-    padding: 30px 100px 30px 30px;
+    padding: 30px;
     span {
       color: #ffffff;
       font-family: "Sora", Arial, Helvetica, sans-serif;
@@ -189,7 +186,8 @@
       font-weight: 500;
     }
     img {
-      width: 300px;
+      width: 100%;
+      object-fit: contain;
     }
   }
 }
