@@ -225,9 +225,10 @@
   }
   /* ================================================================hero section======================================= */
   .hero-section {
-    padding: 100px 0 20px 20px;
+    padding: 100px 0 20px 0;
     .container {
       .inner-hero-section {
+        padding: 0 0 0 20px;
         h1 {
           font-size: 40px;
           padding: 0;
