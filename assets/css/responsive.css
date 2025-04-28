@@ -279,6 +279,18 @@
     }
   }
 
+  /* ================================================================About section======================================= */
+  .about-section {
+    padding: 40px 0;
+    .container {
+      .inner-about-section {
+        h2 {
+          font-size: 30px;
+        }
+      }
+    }
+  }
+
   /* footer second part */
   .footer-second-part {
     margin-top: -60px;
