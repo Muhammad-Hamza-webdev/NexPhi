@@ -1,4 +1,5 @@
-// Animation
+// Animation ======================================================================================================================================================================
+
 const text = document.querySelector(".animate-text");
 const chars = text.textContent.split("");
 text.textContent = "";
@@ -21,6 +22,29 @@ gsap.from(spans, {
   ease: "power2.out",
   duration: 0.6,
 });
+
+// fade up animation ======================================================================================================================================================================
+
+document.addEventListener("DOMContentLoaded", () => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.intersectionRatio >= 0.5) {
+          entry.target.classList.add("active");
+        }
+      });
+    },
+    {
+      threshold: 0.5,
+    }
+  );
+
+  document.querySelectorAll(".scroll-animate").forEach((el) => {
+    observer.observe(el);
+  });
+});
+
+// New animation ======================================================================================================================================================================
 
 function prepareText(element) {
   if (element.hasPrepared) return;
@@ -69,4 +93,141 @@ const observer = new IntersectionObserver(
 document.querySelectorAll(".animation-text-two").forEach((element) => {
   prepareText(element);
   observer.observe(element);
+});
+
+// counter 150K ======================================================================================================================================================================
+
+document.addEventListener("DOMContentLoaded", function () {
+  const counterElement = document.querySelector(".counter");
+  const target = parseInt(counterElement.getAttribute("data-target"));
+  const duration = 2000; // Animation duration in ms
+  const increment = target / (duration / 16); // Roughly 60fps
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting && entry.intersectionRatio >= 0.7) {
+          // When 70% visible
+          animateCounter();
+          observer.unobserve(entry.target); // Stop observing after triggering
+        }
+      });
+    },
+    {
+      threshold: [0.7], // Trigger at 70% visibility
+    }
+  );
+
+  observer.observe(counterElement);
+
+  function animateCounter() {
+    let current = 0;
+    counterElement.classList.add("animated");
+
+    const timer = setInterval(() => {
+      current += increment;
+      if (current >= target) {
+        clearInterval(timer);
+        current = target;
+        counterElement.classList.remove("animated");
+      }
+      counterElement.textContent = Math.floor(current).toLocaleString() + " K";
+    }, 16); // Roughly 60fps
+  }
+});
+
+// partner scroll animation ======================================================================================================================================================================
+
+const track = document.querySelector(".slider-track");
+const images = Array.from(track.children);
+const totalImages = images.length;
+
+// Clone each image once
+images.forEach((img) => {
+  const clone = img.cloneNode(true);
+  track.appendChild(clone);
+});
+
+// Wait for DOM paint to ensure scrollWidth is accurate
+window.addEventListener("load", () => {
+  const totalWidth = track.scrollWidth / 2; // Only original set
+
+  gsap.to(track, {
+    x: `-=${totalWidth}`,
+    duration: 20,
+    ease: "none",
+    repeat: -1,
+    modifiers: {
+      x: gsap.utils.unitize((x) => parseFloat(x) % totalWidth),
+    },
+  });
+});
+
+// counter code here ======================================================================================================================================================================
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Configuration
+  const triggerScrollPercentage = 70; // Trigger at 50% scroll
+  const animationDuration = 2000; // 2 seconds
+
+  // Find all elements with data-counter attribute
+  const counterElements = document.querySelectorAll("[data-counter]");
+
+  // Function to animate a counter
+  function animateCounter(element, target, prefix = "", suffix = "") {
+    let start = 0;
+    const increment = target / (animationDuration / 16); // 60fps
+
+    const updateCounter = () => {
+      start += increment;
+      if (start < target) {
+        element.textContent =
+          prefix + Math.floor(start).toLocaleString() + suffix;
+        requestAnimationFrame(updateCounter);
+      } else {
+        element.textContent = prefix + target.toLocaleString() + suffix;
+      }
+    };
+
+    updateCounter();
+  }
+
+  // Check scroll position
+  function checkScroll() {
+    const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+    const pageHeight =
+      document.documentElement.scrollHeight -
+      document.documentElement.clientHeight;
+    const scrollPercent = (scrollPosition / pageHeight) * 100;
+
+    // If scrolled enough and counters haven't been animated yet
+    if (
+      scrollPercent >= triggerScrollPercentage &&
+      !document.body.classList.contains("counters-animated")
+    ) {
+      document.body.classList.add("counters-animated");
+
+      // Animate each counter element
+      counterElements.forEach((element) => {
+        const rawValue = element.getAttribute("data-counter");
+        const isCurrency = element.hasAttribute("data-currency");
+        const suffix = element.getAttribute("data-suffix") || "";
+        const prefix = isCurrency ? "$" : "";
+
+        // Extract number from value (handles currency symbols, commas, etc.)
+        const target = parseFloat(rawValue.replace(/[^0-9.-]/g, ""));
+
+        animateCounter(element, target, prefix, suffix);
+      });
+
+      // Remove scroll event listener after animation
+      window.removeEventListener("scroll", checkScroll);
+    }
+  }
+
+  // Add scroll event listener
+  window.addEventListener("scroll", checkScroll);
+
+  // Initial check in case page is already scrolled
+  checkScroll();
 });

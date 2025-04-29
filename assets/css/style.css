@@ -507,7 +507,7 @@ body:has(#btn-checkbox-search:checked) .top-to-bottom {
   width: 100%;
   padding: 20px 30px;
   z-index: 7;
-
+  display: none;
   .inner-mobile-header {
     display: flex;
     justify-content: space-between;

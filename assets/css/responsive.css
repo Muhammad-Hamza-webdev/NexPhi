@@ -184,6 +184,7 @@
     .supreme {
       width: 66%;
       flex-direction: row;
+      margin-top: 20px;
       img:nth-child(1) {
         width: 50%;
       }
@@ -192,8 +193,22 @@
       }
     }
     .programming {
+      margin-top: 20px;
       width: 32%;
       height: 500px;
+    }
+  }
+
+  /* ================================================================Project section======================================= */
+  .success-proj {
+    .inner-sucess-proj {
+      flex-direction: column;
+      .left-selection {
+        width: 100%;
+      }
+      .right-selection {
+        width: 100%;
+      }
     }
   }
 }
@@ -271,6 +286,7 @@
       }
     }
     .programming {
+      margin-top: 0;
       width: 100%;
       height: 565px;
       span {
@@ -286,6 +302,39 @@
       .inner-about-section {
         h2 {
           font-size: 30px;
+        }
+      }
+    }
+  }
+
+  /* ================================================================Project section======================================= */
+  .success-proj {
+    .inner-sucess-proj {
+      flex-direction: column;
+      .left-selection {
+        & > span {
+          font-size: 70px;
+          padding: 0 0 0 30px;
+        }
+        & > div {
+          margin-top: -100px;
+          padding: 60px 10px;
+          & > h3 {
+            font-size: 25px;
+          }
+        }
+      }
+      .right-selection {
+        & > span {
+          font-size: 70px;
+          padding: 0 0 0 30px;
+        }
+        & > div {
+          margin-top: -100px;
+          padding: 60px 10px;
+          & > h3 {
+            font-size: 25px;
+          }
         }
       }
     }

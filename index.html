@@ -454,7 +454,7 @@
               <span class="rotate">NexPhi</span>
             </div>
             <div class="second scroll-animate">
-              <h6>150 K</h6>
+              <h6 class="counter" data-target="150">0 K</h6>
               <span>Active users every day</span>
             </div>
           </div>
@@ -484,16 +484,17 @@
     </section>
 
     <!-- partner -->
-
     <section class="partner">
       <div class="container">
         <div class="partner-slider">
-          <img src="assets/img/partners_1.png" alt="Partner" />
-          <img src="assets/img/partners_2.png" alt="Partner" />
-          <img src="assets/img/partners_3.png" alt="Partner" />
-          <img src="assets/img/partners_4.png" alt="Partner" />
-          <img src="assets/img/partners_5.png" alt="Partner" />
-          <img src="assets/img/partners_6.png" alt="Partner" />
+          <div class="slider-track">
+            <img src="assets/img/partners_1.png" alt="Partner" />
+            <img src="assets/img/partners_2.png" alt="Partner" />
+            <img src="assets/img/partners_3.png" alt="Partner" />
+            <img src="assets/img/partners_4.png" alt="Partner" />
+            <img src="assets/img/partners_5.png" alt="Partner" />
+            <img src="assets/img/partners_6.png" alt="Partner" />
+          </div>
         </div>
       </div>
     </section>
@@ -522,6 +523,37 @@
           <button>
             <span class="text">Explore more</span>
           </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- counter section -->
+    <section class="success-proj">
+      <div class="container">
+        <div class="inner-sucess-proj">
+          <!-- For percentages -->
+          <div class="left-selection">
+            <span data-counter="95" data-suffix="%">0%</span>
+            <div class="scroll-animate">
+              <h3>Customer Satisfaction</h3>
+              <p>
+                Achieved a 95% customer satisfaction rate across all AI
+                solutions.
+              </p>
+            </div>
+          </div>
+
+          <!-- For currency values -->
+          <div class="right-selection">
+            <span data-counter="79000" data-currency>$0</span>
+            <div class="scroll-animate">
+              <h3>Cost Savings</h3>
+              <p>
+                Delivered over $10 million in cost savings for clients through
+                optimized AI solutions.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -599,24 +631,4 @@
   </body>
 
   <script src="assets/js/home-gsap-animation.js"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.intersectionRatio >= 0.5) {
-              entry.target.classList.add("active");
-            }
-          });
-        },
-        {
-          threshold: 0.5,
-        }
-      );
-
-      document.querySelectorAll(".scroll-animate").forEach((el) => {
-        observer.observe(el);
-      });
-    });
-  </script>
 </html>
