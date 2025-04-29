@@ -240,10 +240,10 @@
   }
   /* ================================================================hero section======================================= */
   .hero-section {
-    padding: 100px 0 20px 0;
+    padding: 100px 10px 20px 10px;
     .container {
       .inner-hero-section {
-        padding: 0 0 0 20px;
+        padding: 0 0 0 10px;
         h1 {
           font-size: 40px;
           padding: 0;
@@ -297,7 +297,7 @@
 
   /* ================================================================About section======================================= */
   .about-section {
-    padding: 40px 0;
+    padding: 40px 10px;
     .container {
       .inner-about-section {
         h2 {
@@ -309,6 +309,7 @@
 
   /* ================================================================Project section======================================= */
   .success-proj {
+    padding: 40px 10px;
     .inner-sucess-proj {
       flex-direction: column;
       .left-selection {
@@ -318,7 +319,7 @@
         }
         & > div {
           margin-top: -100px;
-          padding: 60px 10px;
+          padding: 60px 0;
           & > h3 {
             font-size: 25px;
           }
@@ -331,7 +332,7 @@
         }
         & > div {
           margin-top: -100px;
-          padding: 60px 10px;
+          padding: 60px 0;
           & > h3 {
             font-size: 25px;
           }
