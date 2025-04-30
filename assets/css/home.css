@@ -397,8 +397,7 @@
     background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
       url("../img/Ooze-16-3-min.webp");
     background-position: top left;
-    background-size: auto;
-    /* background-attachment: fixed; */
+    background-size: cover;
     background-repeat: no-repeat;
     border-radius: 20px;
     height: 800px;
@@ -548,7 +547,7 @@
         h2 {
           font-family: "Sora", Arial, Helvetica, sans-serif;
           font-size: 100px;
-          font-weight: 400;
+          font-weight: 500;
 
           span {
             background-clip: text;

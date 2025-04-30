@@ -29,13 +29,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
-        if (entry.intersectionRatio >= 0.5) {
+        if (entry.intersectionRatio >= 0.2) {
           entry.target.classList.add("active");
         }
       });
     },
     {
-      threshold: 0.5,
+      threshold: 0.2,
     }
   );
 
@@ -246,3 +246,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   checkScroll();
 });
+
+// prevent to get list of menu
+// document.addEventListener("contextmenu", function (e) {
+//   e.preventDefault();
+// });
