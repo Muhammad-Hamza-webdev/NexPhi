@@ -163,20 +163,42 @@ window.addEventListener("load", () => {
   });
 });
 
+const sliderContainer = document.querySelector(".slider-track-2");
+const logoItems = Array.from(sliderContainer.children);
+const logoCount = logoItems.length;
+
+// Clone each logo image once
+logoItems.forEach((logo) => {
+  const duplicatedLogo = logo.cloneNode(true);
+  sliderContainer.appendChild(duplicatedLogo);
+});
+
+// Wait for DOM to load fully before calculating scroll width
+window.addEventListener("load", () => {
+  const originalTrackWidth = sliderContainer.scrollWidth / 2;
+
+  gsap.to(sliderContainer, {
+    x: `-=${originalTrackWidth}`,
+    duration: 20,
+    ease: "none",
+    repeat: -1,
+    modifiers: {
+      x: gsap.utils.unitize((value) => parseFloat(value) % originalTrackWidth),
+    },
+  });
+});
+
 // counter code here ======================================================================================================================================================================
 
 document.addEventListener("DOMContentLoaded", function () {
-  // Configuration
-  const triggerScrollPercentage = 70; // Trigger at 50% scroll
-  const animationDuration = 2000; // 2 seconds
+  const triggerScrollPercentage = 30;
+  const animationDuration = 3000;
 
-  // Find all elements with data-counter attribute
   const counterElements = document.querySelectorAll("[data-counter]");
 
-  // Function to animate a counter
   function animateCounter(element, target, prefix = "", suffix = "") {
     let start = 0;
-    const increment = target / (animationDuration / 16); // 60fps
+    const increment = target / (animationDuration / 16);
 
     const updateCounter = () => {
       start += increment;
@@ -192,7 +214,6 @@ document.addEventListener("DOMContentLoaded", function () {
     updateCounter();
   }
 
-  // Check scroll position
   function checkScroll() {
     const scrollPosition = window.scrollY || document.documentElement.scrollTop;
     const pageHeight =
@@ -200,34 +221,28 @@ document.addEventListener("DOMContentLoaded", function () {
       document.documentElement.clientHeight;
     const scrollPercent = (scrollPosition / pageHeight) * 100;
 
-    // If scrolled enough and counters haven't been animated yet
     if (
       scrollPercent >= triggerScrollPercentage &&
       !document.body.classList.contains("counters-animated")
     ) {
       document.body.classList.add("counters-animated");
 
-      // Animate each counter element
       counterElements.forEach((element) => {
         const rawValue = element.getAttribute("data-counter");
         const isCurrency = element.hasAttribute("data-currency");
         const suffix = element.getAttribute("data-suffix") || "";
         const prefix = isCurrency ? "$" : "";
 
-        // Extract number from value (handles currency symbols, commas, etc.)
         const target = parseFloat(rawValue.replace(/[^0-9.-]/g, ""));
 
         animateCounter(element, target, prefix, suffix);
       });
 
-      // Remove scroll event listener after animation
       window.removeEventListener("scroll", checkScroll);
     }
   }
 
-  // Add scroll event listener
   window.addEventListener("scroll", checkScroll);
 
-  // Initial check in case page is already scrolled
   checkScroll();
 });

@@ -1,4 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Sora:wght@100..800&display=swap");
+@font-face {
+  font-family: "Proximateus";
+  src: url("../font/Proximateus.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 
 * {
   margin: 0;
@@ -223,6 +229,11 @@
           height: 60px;
           width: auto;
           flex-shrink: 0;
+          opacity: 0.3;
+          transition-duration: 0.3s;
+          &:hover {
+            opacity: 1;
+          }
         }
       }
     }
@@ -367,6 +378,217 @@
           font-family: "Manrope", Arial, Helvetica, sans-serif;
           font-size: 16px;
           font-weight: 500;
+        }
+      }
+    }
+  }
+}
+
+/* ================================================================Nexphi section======================================= */
+
+.nexphi-section {
+  background-color: #111111;
+  display: flex;
+  justify-content: center;
+  padding: 50px 0;
+  border-radius: 0 0 30px 30px;
+  .inner-logo {
+    padding: 50px 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+      url("../img/Ooze-16-3-min.webp");
+    background-position: top left;
+    background-size: auto;
+    /* background-attachment: fixed; */
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    height: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+    overflow: hidden;
+
+    img {
+      width: 60px;
+    }
+
+    span {
+      color: #ffffff;
+      font-family: "Proximateus", Arial, sans-serif;
+      font-size: 60px;
+      font-weight: 600;
+    }
+
+    .button {
+      position: absolute;
+      bottom: 0;
+      right: 0px;
+      z-index: 2;
+      background: #111111;
+      border: none;
+      color: #ffffff;
+      font-family: "Manrope", Arial, Helvetica, sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+      border-top-left-radius: 20px;
+      text-decoration: none;
+
+      & > div {
+        width: 300px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+
+        svg {
+          width: 30px;
+          height: 30px;
+        }
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        right: 0;
+        left: initial;
+        top: -40px;
+        bottom: initial;
+        border-radius: 0;
+        border-bottom-right-radius: 20px;
+        box-shadow: 0 20px 0 0 #111111;
+        width: 20px;
+        height: 20px;
+        background: transparent;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: -20px;
+        right: initial;
+        top: initial;
+        bottom: 20px;
+        border-radius: 0;
+        border-bottom-right-radius: 20px;
+        box-shadow: 0 20px 0 0 #111111;
+        width: 20px;
+        height: 20px;
+        background: transparent;
+      }
+    }
+  }
+}
+
+/* ================================================================Work with section======================================= */
+
+.work-with {
+  position: relative;
+  display: flex;
+  padding: 100px 0;
+  justify-content: center;
+
+  .body-lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+
+    .body-line {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 0;
+      border-left: solid 1px;
+      border-left-color: currentcolor;
+    }
+    .body-line-l1 {
+      border-color: #eceef1;
+      left: 5.5%;
+    }
+    .body-line-l2 {
+      border-color: #eceef1;
+      left: 40%;
+    }
+    .body-line-r1 {
+      border-color: #eceef1;
+      right: 30%;
+    }
+    .body-line-r2 {
+      border-color: #eceef1;
+      right: 11%;
+    }
+  }
+
+  .inner-work-with {
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    position: relative;
+
+    .one-frame {
+      display: flex;
+      align-items: center;
+      .img {
+        width: 40%;
+        display: flex;
+        justify-content: center;
+        img {
+          width: 450px;
+        }
+      }
+
+      .companies {
+        width: 60%;
+
+        h2 {
+          font-family: "Sora", Arial, Helvetica, sans-serif;
+          font-size: 100px;
+          font-weight: 400;
+
+          span {
+            background-clip: text;
+            -webkit-background-clip: text;
+            text-decoration: none;
+            color: transparent;
+            background-color: transparent;
+            background-image: linear-gradient(262deg, #048bc5 15%, #69da18 95%);
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ================================================================Partner section======================================= */
+.partner-2 {
+  padding: 100px 0 0 0;
+  z-index: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  .container {
+    width: 100%;
+    max-width: 1000px;
+    .partner-slider {
+      overflow: hidden;
+      max-width: 100%;
+      .slider-track-2 {
+        display: flex;
+        gap: 20px;
+        img {
+          height: 60px;
+          width: auto;
+          flex-shrink: 0;
+          opacity: 0.3;
+          transition-duration: 0.3s;
+          &:hover {
+            opacity: 1;
+          }
         }
       }
     }

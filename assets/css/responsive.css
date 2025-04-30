@@ -1,16 +1,26 @@
+/* =============================================================================================== */
+/* ===========================================1920px============================================== */
+/* =============================================================================================== */
+
 @media (max-width: 1920px) {
   .mobile-header {
     display: none;
   }
 }
+
+/* =============================================================================================== */
+/* ===========================================1600px============================================== */
+/* =============================================================================================== */
+
 @media (max-width: 1600px) {
   .left-section {
     .main-box {
       width: 25%;
+      gap: 50px;
     }
   }
 
-  /* ================================================================hero section======================================= */
+  /* ====hero section==== */
   .hero-section {
     .container {
       .inner-hero-section {
@@ -24,7 +34,31 @@
       }
     }
   }
+
+  /* ====nexphi company section==== */
+  .work-with {
+    .inner-work-with {
+      .one-frame {
+        .img {
+          img {
+            width: 400px;
+          }
+        }
+
+        .companies {
+          h2 {
+            font-size: 85px;
+          }
+        }
+      }
+    }
+  }
 }
+
+/* =============================================================================================== */
+/* ===========================================1366px============================================== */
+/* =============================================================================================== */
+
 @media (max-width: 1366px) {
   .main-header {
     display: none;
@@ -44,7 +78,7 @@
       }
     }
 
-    /* ================================================================hero section======================================= */
+    /* ====hero section==== */
     .hero-section {
       .container {
         .inner-hero-section {
@@ -60,9 +94,27 @@
     }
   }
 
-  /* footer code */
+  /* ====nexphi company section==== */
+  .work-with {
+    padding: 80px 0;
+    .inner-work-with {
+      .one-frame {
+        .img {
+          img {
+            width: 350px;
+          }
+        }
 
-  /* ================================================= Footer ================================================ */
+        .companies {
+          h2 {
+            font-size: 74px;
+          }
+        }
+      }
+    }
+  }
+
+  /* ==== Footer ==== */
   .main-footer {
     .container {
       .inner-main-footer {
@@ -80,8 +132,12 @@
   }
 }
 
+/* =============================================================================================== */
+/* ===========================================1200px============================================== */
+/* =============================================================================================== */
+
 @media (max-width: 1200px) {
-  /* ================================================================hero section======================================= */
+  /* ====hero section==== */
   .hero-section {
     .container {
       .inner-hero-section {
@@ -91,6 +147,26 @@
         }
         p {
           padding: 0 17%;
+        }
+      }
+    }
+  }
+
+  /* ====nexphi company section==== */
+  .work-with {
+    padding: 80px 0;
+    .inner-work-with {
+      .one-frame {
+        .img {
+          img {
+            width: 300px;
+          }
+        }
+
+        .companies {
+          h2 {
+            font-size: 65px;
+          }
         }
       }
     }
@@ -131,29 +207,53 @@
     }
   }
 }
+
+/* =============================================================================================== */
+/* ===========================================1024px============================================== */
+/* =============================================================================================== */
+
 @media (max-width: 1024px) {
-}
+  /* ====scroll on top section==== */
 
-@media (max-width: 850px) {
-  /* ================================================= Footer ================================================ */
-  .main-footer {
-    .container {
-      .inner-main-footer {
-        .footer-content {
-          .icon {
-            flex: 1 1 100%;
+  .scroll-to-top {
+    bottom: 6%;
+    right: 6%;
+  }
 
-            .text {
-              p {
-                font-size: 50px;
-              }
-            }
+  /* ====Project section==== */
+  .success-proj {
+    .inner-sucess-proj {
+      flex-direction: column;
+      .left-selection {
+        width: 100%;
+      }
+      .right-selection {
+        width: 100%;
+      }
+    }
+  }
+
+  /* ====nexphi company section==== */
+  .work-with {
+    padding: 80px 0;
+    .inner-work-with {
+      .one-frame {
+        .companies {
+          h2 {
+            font-size: 55px;
           }
         }
       }
     }
   }
-  /* ================================================================hero section======================================= */
+}
+
+/* =============================================================================================== */
+/* ============================================850px============================================== */
+/* =============================================================================================== */
+
+@media (max-width: 850px) {
+  /* ====hero section==== */
   .hero-section {
     padding: 160px 0 50px 0;
     .container {
@@ -199,38 +299,63 @@
     }
   }
 
-  /* ================================================================Project section======================================= */
-  .success-proj {
-    .inner-sucess-proj {
-      flex-direction: column;
-      .left-selection {
-        width: 100%;
-      }
-      .right-selection {
-        width: 100%;
-      }
+  /* ====Nexphi section==== */
+  .nexphi {
+    .inner-logo {
+      height: 600px;
     }
   }
-}
 
-@media (max-width: 550px) {
-  .mobile-menu {
-    .mobile-menu-main {
-      width: 80%;
+  /* ====Work with section==== */
+
+  .work-with {
+    padding: 60px 0;
+    .body-lines {
+      .body-line-l1 {
+        left: 20%;
+      }
+      .body-line-l2 {
+        display: none;
+      }
+      .body-line-r1 {
+        display: none;
+      }
+      .body-line-r2 {
+        right: 6%;
+      }
+    }
+
+    .inner-work-with {
+      .one-frame {
+        flex-direction: column;
+        .img {
+          width: 100%;
+          img {
+            width: 250px;
+          }
+        }
+
+        .companies {
+          margin-top: 20px;
+          width: 100%;
+          h2 {
+            font-size: 72px;
+          }
+        }
+      }
     }
   }
-  /* ================================================= Footer ================================================ */
+  /* ==== Footer ==== */
   .main-footer {
     .container {
       .inner-main-footer {
-        padding: 70px 20px 70px 20px;
         .footer-content {
           .icon {
             flex: 1 1 100%;
 
             .text {
               p {
-                font-size: 30px;
+                font-size: 50px;
               }
             }
           }
@@ -238,7 +363,20 @@
       }
     }
   }
-  /* ================================================================hero section======================================= */
+}
+
+/* =============================================================================================== */
+/* ===========================================550px=============================================== */
+/* =============================================================================================== */
+
+@media (max-width: 550px) {
+  .mobile-menu {
+    .mobile-menu-main {
+      width: 80%;
+    }
+  }
+
+  /* ====hero section==== */
   .hero-section {
     padding: 100px 10px 20px 10px;
     .container {
@@ -295,7 +433,7 @@
     }
   }
 
-  /* ================================================================About section======================================= */
+  /* ====About section==== */
   .about-section {
     padding: 40px 10px;
     .container {
@@ -307,7 +445,7 @@
     }
   }
 
-  /* ================================================================Project section======================================= */
+  /* ====Project section==== */
   .success-proj {
     padding: 40px 10px;
     .inner-sucess-proj {
@@ -341,6 +479,13 @@
     }
   }
 
+  /* ====Nexphi section==== */
+  .nexphi {
+    .inner-logo {
+      height: 500px;
+    }
+  }
+
   /* footer second part */
   .footer-second-part {
     margin-top: -60px;
@@ -349,6 +494,54 @@
         align-items: center;
         flex-direction: column-reverse;
         gap: 20px;
+      }
+    }
+  }
+
+  /* ====Work with section==== */
+
+  .work-with {
+    padding: 60px 0;
+
+    .inner-work-with {
+      .one-frame {
+        .img {
+          img {
+            width: 150px;
+          }
+        }
+
+        .companies {
+          h2 {
+            font-size: 37px;
+          }
+        }
+      }
+    }
+  }
+
+  /* ====partner 2 section==== */
+
+  .partner-2 {
+    padding: 50px 0 0 0;
+  }
+
+  /* ==== Footer ==== */
+  .main-footer {
+    .container {
+      .inner-main-footer {
+        padding: 70px 20px 70px 20px;
+        .footer-content {
+          .icon {
+            flex: 1 1 100%;
+
+            .text {
+              p {
+                font-size: 30px;
+              }
+            }
+          }
+        }
       }
     }
   }
