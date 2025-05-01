@@ -10,22 +10,48 @@
   color: #69da18;
   background-color: rgba(0, 0, 0, 0); /* transparent background */
 }
+/* scroll bar color change */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #69da18, #048bc5);
+  border-radius: 10px;
+  border: 2px solid #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #5bc716, #037aad);
+}
 
 html {
   scroll-behavior: smooth;
 }
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scrollbar-width: thin;
+  scrollbar-color: #69da18 #048bc5;
 }
+
 .container {
   width: 95%;
   max-width: 1920px;
 }
+
 a {
   text-decoration: none;
 }
+
 /* button generic code*/
 button {
   align-items: center;
@@ -66,6 +92,7 @@ button:hover span {
 button:active {
   transform: scale(0.9);
 }
+
 /* ================================================ scroll to top ========================================== */
 
 .scroll-to-top {
@@ -779,6 +806,7 @@ body:not(:has(#menu-toggle:checked)) {
     justify-content: center;
 
     .inner-path {
+      position: relative;
       width: 90%;
       padding: 30px 20px;
       border-radius: 20px;
@@ -786,6 +814,21 @@ body:not(:has(#menu-toggle:checked)) {
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
+      & > svg:nth-child(1) {
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        left: -29px;
+        bottom: 43px;
+      }
+      & > svg:nth-child(2) {
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        transform: rotate(90deg);
+        right: -29px;
+        bottom: 44px;
+      }
       p {
         color: #111111;
         text-decoration: none;

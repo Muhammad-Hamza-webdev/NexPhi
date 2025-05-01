@@ -4,24 +4,30 @@
   border-radius: 0 0 20px 20px;
   display: flex;
   justify-content: center;
+
   .inner-hero-section {
     background-image: url("../img/Ooze-16-3-min.webp");
-    background-position: center center;
+    background-size: inherit;
+    background-position-x: center;
+    background-position-y: -520px;
     background-repeat: no-repeat;
     border-radius: 20px;
     padding: 140px 240px;
     position: relative;
     overflow: hidden;
+
     div {
       img {
         width: 50px;
       }
+
       h1 {
         color: #ffffff;
         font-family: "Sora", Arial, Helvetica, sans-serif;
         font-size: 80px;
-        font-weight: 500;
+        font-weight: 600;
       }
+
       .rotate {
         color: #048bc5;
         font-family: "Manrope", Arial, Helvetica, sans-serif;
@@ -35,29 +41,66 @@
         margin: 10px;
       }
     }
+
     .breadcrumb {
       position: absolute;
       bottom: 0;
-      right: 200px;
+      right: 180px;
       background-color: #f0f2f4;
       width: 180px;
       height: 70px;
-      border-radius: 20px;
+      border-radius: 20px 20px 0 0;
       align-content: center;
+
+      & > svg:nth-child(1) {
+        position: absolute;
+        width: 30px;
+        height: 60px;
+        bottom: -15px;
+        left: -30px;
+      }
+
+      & > svg:nth-child(2) {
+        position: absolute;
+        width: 30px;
+        height: 60px;
+        bottom: -15px;
+        right: -30px;
+        transform: rotate(-270deg);
+      }
+
       ul {
         display: flex;
         gap: 10px;
         justify-content: center;
+
         li {
           list-style: none;
           font-family: "Manrope", Arial, Helvetica, sans-serif;
           font-size: 14px;
           font-weight: 600;
           color: #333333;
+          position: relative;
+
           a {
             color: #333333;
+
             &:hover {
               color: #048bc5;
+            }
+          }
+
+          &:first-child a {
+            position: relative;
+
+            &::after {
+              content: "";
+              position: absolute;
+              left: 0;
+              bottom: -4px;
+              width: 100%;
+              height: 2px;
+              background-image: linear-gradient(90deg, #69da18, #048bc5);
             }
           }
         }
@@ -117,6 +160,7 @@
       .contact-info {
         display: flex;
         flex-direction: column;
+        justify-content: center;
         gap: 20px;
         width: 55%;
         span {
@@ -143,56 +187,165 @@
       .contact-form {
         margin: 0 0 0 150px;
         width: 45%;
-        padding: 9% 6%;
+        padding: 6%;
         border-radius: 20px;
         background-color: #f0f2f4;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        h5 {
+          font-family: "Sora", Arial, Helvetica, sans-serif;
+          font-size: 30px;
+          font-weight: 400;
+          color: #111111;
+        }
+
+        p {
+          font-size: 16px;
+          font-family: "Manrope", Arial, Helvetica, sans-serif;
+          font-weight: 500;
+          color: #333333;
+        }
+
+        form {
+          display: flex;
+          flex-direction: column;
+          gap: 30px;
+        }
+
         .input-contact {
           position: relative;
-        }
 
-        .input-contact input[type="text"] {
-          font-size: 20px;
-          width: 100%;
-          border: none;
-          border-bottom: 1px solid #ccc;
-          padding: 5px 0;
-          background-color: transparent;
-          outline: none;
-        }
+          /* Apply styles to ALL input types (text, email) and textarea */
+          input,
+          textarea {
+            font-size: 20px;
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid #ccc;
+            padding: 5px 0;
+            background-color: transparent;
+            outline: none;
+            resize: none; /* Prevent textarea resizing */
+          }
+          textarea {
+            height: 120px;
+          }
 
-        .input-contact .label {
-          font-size: 14px;
-          font-family: "Manrope", Arial, Helvetica, sans-serif;
-          position: absolute;
-          top: 0;
-          left: 0;
-          color: #ccc;
-          transition: all 0.3s ease;
-          pointer-events: none;
-        }
+          .label {
+            font-size: 14px;
+            font-family: "Manrope", Arial, Helvetica, sans-serif;
+            position: absolute;
+            top: 0;
+            left: 0;
+            color: #ccc;
+            transition: all 0.3s ease;
+            pointer-events: none;
+          }
 
-        .input-contact input[type="text"]:focus ~ .label,
-        .input-contact input[type="text"]:valid ~ .label {
-          top: -20px;
-          font-size: 16px;
-          color: #333;
-        }
+          /* Apply floating label effect to ALL inputs & textarea */
+          input:focus ~ .label,
+          input:valid ~ .label,
+          textarea:focus ~ .label,
+          textarea:valid ~ .label {
+            top: -20px;
+            font-size: 16px;
+            color: #333;
+          }
 
-        .input-contact .underline {
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          height: 2px;
-          width: 100%;
-          background-color: #333;
-          transform: scaleX(0);
-          transition: all 0.3s ease;
-        }
+          .underline {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 2px;
+            width: 100%;
+            background-color: #333;
+            transform: scaleX(0);
+            transition: all 0.3s ease;
+          }
 
-        .input-contact input[type="text"]:focus ~ .underline,
-        .input-contact input[type="text"]:valid ~ .underline {
-          transform: scaleX(1);
+          /* Apply underline animation to ALL inputs & textarea */
+          input:focus ~ .underline,
+          input:valid ~ .underline,
+          textarea:focus ~ .underline,
+          textarea:valid ~ .underline {
+            transform: scaleX(1);
+          }
         }
+      }
+    }
+  }
+}
+
+/* Specific button container with nested styles */
+.button-container-dark-grey {
+  background-color: #333333;
+  border-radius: 360px;
+  display: flex;
+  align-items: center;
+  width: 200px;
+  max-width: 200px;
+  overflow: hidden;
+
+  & .btn-grey {
+    padding: 18px 20px 18px 10px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #ffffff;
+    font-family: "Manrope", Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    gap: 10px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+
+    & svg {
+      width: 15px;
+      height: 15px;
+      margin-top: 5px;
+      transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+        transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+      &:nth-child(1) {
+        opacity: 0;
+        transform: translateX(-10px);
+      }
+
+      &:nth-child(2) {
+        opacity: 1;
+        transform: translateX(0px);
+      }
+    }
+
+    & span {
+      display: inline-block;
+      transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+        opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    &:hover {
+      padding: 18px 5px 18px 30px;
+      background-color: #048bc5;
+
+      & svg:nth-child(1) {
+        opacity: 1;
+        transform: translateX(0px);
+      }
+
+      & svg:nth-child(2) {
+        opacity: 0;
+        transform: translateX(10px);
+      }
+
+      & span {
+        transform: translateX(5px);
+        opacity: 0.9;
       }
     }
   }

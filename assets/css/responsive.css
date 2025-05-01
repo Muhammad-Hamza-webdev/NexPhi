@@ -206,6 +206,15 @@
       }
     }
   }
+  .footer-second-part {
+    .container {
+      .inner-path {
+        & > svg:nth-child(2) {
+          bottom: 43px;
+        }
+      }
+    }
+  }
 }
 
 /* =============================================================================================== */
@@ -553,6 +562,20 @@
               }
             }
           }
+        }
+      }
+    }
+  }
+  .footer-second-part {
+    .container {
+      .inner-path {
+        & > svg:nth-child(1) {
+          left: -30px;
+          bottom: 65px;
+        }
+        & > svg:nth-child(2) {
+          right: -29px;
+          bottom: 66px;
         }
       }
     }
