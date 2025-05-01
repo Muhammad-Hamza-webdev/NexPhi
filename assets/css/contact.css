@@ -1,0 +1,199 @@
+.hero-section {
+  background-color: #f0f2f4;
+  padding: 150px 0 50px 0;
+  border-radius: 0 0 20px 20px;
+  display: flex;
+  justify-content: center;
+  .inner-hero-section {
+    background-image: url("../img/Ooze-16-3-min.webp");
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    padding: 140px 240px;
+    position: relative;
+    overflow: hidden;
+    div {
+      img {
+        width: 50px;
+      }
+      h1 {
+        color: #ffffff;
+        font-family: "Sora", Arial, Helvetica, sans-serif;
+        font-size: 80px;
+        font-weight: 500;
+      }
+      .rotate {
+        color: #048bc5;
+        font-family: "Manrope", Arial, Helvetica, sans-serif;
+        font-size: 100px;
+        font-weight: 700;
+        display: inline-block;
+        transform: rotate(-90deg);
+        position: absolute;
+        bottom: 170px;
+        right: -173px;
+        margin: 10px;
+      }
+    }
+    .breadcrumb {
+      position: absolute;
+      bottom: 0;
+      right: 200px;
+      background-color: #f0f2f4;
+      width: 180px;
+      height: 70px;
+      border-radius: 20px;
+      align-content: center;
+      ul {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        li {
+          list-style: none;
+          font-family: "Manrope", Arial, Helvetica, sans-serif;
+          font-size: 14px;
+          font-weight: 600;
+          color: #333333;
+          a {
+            color: #333333;
+            &:hover {
+              color: #048bc5;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* get in touch section */
+
+.get-in-touch {
+  display: flex;
+  position: relative;
+  padding: 100px 0;
+  .container {
+    display: flex;
+    justify-content: center;
+    .body-lines {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: 0;
+
+      .body-line {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 0;
+        border-left: solid 1px;
+        border-left-color: currentcolor;
+      }
+      .body-line-l1 {
+        border-color: #eceef1;
+        left: 5.5%;
+      }
+      .body-line-l2 {
+        border-color: #eceef1;
+        left: 40%;
+      }
+      .body-line-r1 {
+        border-color: #eceef1;
+        right: 30%;
+      }
+      .body-line-r2 {
+        border-color: #eceef1;
+        right: 11%;
+      }
+    }
+    .inner-get-in-touch {
+      display: flex;
+      z-index: 1;
+      position: relative;
+      width: 1366px;
+      .contact-info {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 55%;
+        span {
+          font-size: 16px;
+          font-family: "Manrope", Arial, Helvetica, sans-serif;
+          font-weight: 500;
+          color: #111111;
+        }
+        h2 {
+          font-family: "Sora", Arial, Helvetica, sans-serif;
+          font-size: 60px;
+          font-weight: 500;
+          color: #111111;
+        }
+        p {
+          font-size: 16px;
+          font-family: "Manrope", Arial, Helvetica, sans-serif;
+          font-weight: 500;
+          color: #111111;
+          padding: 0 150px 0 0;
+        }
+      }
+      /* contact form */
+      .contact-form {
+        margin: 0 0 0 150px;
+        width: 45%;
+        padding: 9% 6%;
+        border-radius: 20px;
+        background-color: #f0f2f4;
+        .input-contact {
+          position: relative;
+        }
+
+        .input-contact input[type="text"] {
+          font-size: 20px;
+          width: 100%;
+          border: none;
+          border-bottom: 1px solid #ccc;
+          padding: 5px 0;
+          background-color: transparent;
+          outline: none;
+        }
+
+        .input-contact .label {
+          font-size: 14px;
+          font-family: "Manrope", Arial, Helvetica, sans-serif;
+          position: absolute;
+          top: 0;
+          left: 0;
+          color: #ccc;
+          transition: all 0.3s ease;
+          pointer-events: none;
+        }
+
+        .input-contact input[type="text"]:focus ~ .label,
+        .input-contact input[type="text"]:valid ~ .label {
+          top: -20px;
+          font-size: 16px;
+          color: #333;
+        }
+
+        .input-contact .underline {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          height: 2px;
+          width: 100%;
+          background-color: #333;
+          transform: scaleX(0);
+          transition: all 0.3s ease;
+        }
+
+        .input-contact input[type="text"]:focus ~ .underline,
+        .input-contact input[type="text"]:valid ~ .underline {
+          transform: scaleX(1);
+        }
+      }
+    }
+  }
+}

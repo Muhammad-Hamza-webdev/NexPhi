@@ -432,6 +432,20 @@
       font-weight: 500;
       border-top-left-radius: 20px;
       text-decoration: none;
+      & > svg:nth-child(1) {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        right: 0;
+        top: -30px;
+      }
+      & > svg:nth-child(2) {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        bottom: 0;
+        left: -30px;
+      }
 
       & > div {
         width: 300px;
@@ -445,36 +459,6 @@
           width: 30px;
           height: 30px;
         }
-      }
-
-      &::before {
-        content: "";
-        position: absolute;
-        right: 0;
-        left: initial;
-        top: -40px;
-        bottom: initial;
-        border-radius: 0;
-        border-bottom-right-radius: 20px;
-        box-shadow: 0 20px 0 0 #111111;
-        width: 20px;
-        height: 20px;
-        background: transparent;
-      }
-
-      &::after {
-        content: "";
-        position: absolute;
-        left: -20px;
-        right: initial;
-        top: initial;
-        bottom: 20px;
-        border-radius: 0;
-        border-bottom-right-radius: 20px;
-        box-shadow: 0 20px 0 0 #111111;
-        width: 20px;
-        height: 20px;
-        background: transparent;
       }
     }
   }

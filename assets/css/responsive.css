@@ -47,7 +47,7 @@
 
         .companies {
           h2 {
-            font-size: 85px;
+            font-size: 82px;
           }
         }
       }
@@ -303,6 +303,12 @@
   .nexphi-section {
     .inner-logo {
       height: 600px;
+      .button {
+        & > div {
+          width: 250px;
+          height: 90px;
+        }
+      }
     }
   }
 
@@ -483,6 +489,12 @@
   .nexphi-section {
     .inner-logo {
       height: 500px;
+      .button {
+        & > div {
+          width: 200px;
+          height: 80px;
+        }
+      }
     }
   }
 
