@@ -1,0 +1,111 @@
+.hero-section-about {
+  background-color: #f0f2f4;
+  padding: 150px 0 50px 0;
+  border-radius: 0 0 20px 20px;
+  display: flex;
+  justify-content: center;
+
+  .inner-hero-section {
+    background-image: url("../img/Ooze-16-3-min.webp");
+    background-size: inherit;
+    background-position-x: center;
+    background-size: cover;
+    background-position-y: -520px;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    padding: 170px 240px;
+    position: relative;
+    overflow: hidden;
+
+    div {
+      img {
+        width: 50px;
+      }
+
+      h1 {
+        color: #ffffff;
+        font-family: "Sora", Arial, Helvetica, sans-serif;
+        font-size: 80px;
+        font-weight: 600;
+      }
+
+      .rotate {
+        color: #048bc5;
+        font-family: "Manrope", Arial, Helvetica, sans-serif;
+        font-size: 100px;
+        font-weight: 700;
+        display: inline-block;
+        transform: rotate(-90deg);
+        position: absolute;
+        top: 140px;
+        right: -125px;
+        margin: 10px;
+      }
+    }
+
+    .breadcrumb {
+      position: absolute;
+      bottom: 0;
+      right: 180px;
+      background-color: #f0f2f4;
+      width: 180px;
+      height: 70px;
+      border-radius: 20px 20px 0 0;
+      align-content: center;
+
+      & > svg:nth-child(1) {
+        position: absolute;
+        width: 30px;
+        height: 60px;
+        bottom: -15px;
+        left: -30px;
+      }
+
+      & > svg:nth-child(2) {
+        position: absolute;
+        width: 30px;
+        height: 60px;
+        bottom: -15px;
+        right: -30px;
+        transform: rotate(-270deg);
+      }
+
+      ul {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+
+        li {
+          list-style: none;
+          font-family: "Manrope", Arial, Helvetica, sans-serif;
+          font-size: 14px;
+          font-weight: 600;
+          color: #333333;
+          position: relative;
+
+          a {
+            color: #333333;
+
+            &:hover {
+              color: #048bc5;
+            }
+          }
+
+          &:first-child a {
+            position: relative;
+
+            &::after {
+              content: "";
+              position: absolute;
+              left: 0;
+              bottom: -4px;
+              width: 100%;
+              height: 2px;
+              background-image: linear-gradient(90deg, #69da18, #048bc5);
+            }
+          }
+        }
+      }
+    }
+  }
+}

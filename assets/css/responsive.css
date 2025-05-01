@@ -59,6 +59,13 @@
       background-position-y: -290px;
     }
   }
+
+  /* ============= about us page code ============ */
+  .hero-section-about {
+    .inner-hero-section {
+      background-position-y: -290px;
+    }
+  }
 }
 
 /* =============================================================================================== */
@@ -166,6 +173,28 @@
       /* main code start from here */
       .inner-get-in-touch {
         width: auto;
+      }
+    }
+  }
+
+  /* ============= about us page code ============ */
+
+  .hero-section-about {
+    padding: 130px 0 50px 0;
+
+    .inner-hero-section {
+      background-position-y: -290px;
+      padding: 140px 140px;
+
+      div {
+        h1 {
+          font-size: 70px;
+        }
+
+        .rotate {
+          font-size: 70px;
+          right: -90px;
+        }
       }
     }
   }
@@ -343,6 +372,15 @@
       }
     }
   }
+
+  /* ============= about us page code ============ */
+
+  .hero-section-about {
+    .inner-hero-section {
+      background-position-y: -100px;
+      padding: 140px 80px;
+    }
+  }
 }
 
 /* =============================================================================================== */
@@ -505,6 +543,31 @@
             gap: 40px;
           }
         }
+      }
+    }
+  }
+
+  /* ============= about us page code ============ */
+
+  .hero-section-about {
+    .inner-hero-section {
+      background-position-y: -50px;
+      padding: 120px 80px;
+
+      div {
+        h1 {
+          font-size: 60px;
+        }
+
+        .rotate {
+          font-size: 70px;
+          right: -90px;
+          top: 90px;
+        }
+      }
+
+      .breadcrumb {
+        right: 100px;
       }
     }
   }
@@ -769,6 +832,33 @@
         .contact-form {
           padding: 10% 6%;
         }
+      }
+    }
+  }
+
+  /* ============ about page code =============*/
+  .hero-section-about {
+    padding: 130px 0 40px 0;
+    .inner-hero-section {
+      background-position-y: 0;
+      padding: 120px 20px;
+
+      div {
+        img {
+          width: 40px;
+        }
+
+        h1 {
+          font-size: 50px;
+        }
+
+        .rotate {
+          font-size: 60px;
+          right: -80px;
+        }
+      }
+      .breadcrumb {
+        right: 70px;
       }
     }
   }
