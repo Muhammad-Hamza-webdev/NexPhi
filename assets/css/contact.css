@@ -12,7 +12,7 @@
     background-position-y: -520px;
     background-repeat: no-repeat;
     border-radius: 20px;
-    padding: 140px 240px;
+    padding: 170px 240px;
     position: relative;
     overflow: hidden;
 
@@ -36,8 +36,8 @@
         display: inline-block;
         transform: rotate(-90deg);
         position: absolute;
-        bottom: 170px;
-        right: -173px;
+        top: 140px;
+        right: -175px;
         margin: 10px;
       }
     }
@@ -114,10 +114,13 @@
 .get-in-touch {
   display: flex;
   position: relative;
-  padding: 100px 0;
+  justify-content: center;
+  padding: 100px 0 50px 0;
   .container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     .body-lines {
       position: absolute;
       top: 0;
@@ -152,16 +155,18 @@
         right: 11%;
       }
     }
+    /* main code start from here */
     .inner-get-in-touch {
       display: flex;
       z-index: 1;
       position: relative;
       width: 1366px;
+      margin-bottom: 100px;
       .contact-info {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        gap: 20px;
+        gap: 30px;
         width: 55%;
         span {
           font-size: 16px;
@@ -181,6 +186,81 @@
           font-weight: 500;
           color: #111111;
           padding: 0 150px 0 0;
+        }
+        .nexphi-info {
+          display: flex;
+          width: 100%;
+          .phone {
+            display: flex;
+            flex-direction: column;
+            width: 35%;
+            gap: 20px;
+            div {
+              display: flex;
+              flex-direction: column;
+              gap: 10px;
+              h4 {
+                font-size: 20px;
+                font-family: "Manrope", Arial, Helvetica, sans-serif;
+                font-weight: 700;
+                color: #111111;
+              }
+              a {
+                font-size: 16px;
+                font-family: "Manrope", Arial, Helvetica, sans-serif;
+                font-weight: 700;
+                color: #333333;
+                &:hover {
+                  color: #048bc5;
+                }
+              }
+            }
+          }
+          .location {
+            display: flex;
+            flex-direction: column;
+            width: 35%;
+            gap: 20px;
+            div {
+              display: flex;
+              flex-direction: column;
+              gap: 10px;
+              h4 {
+                font-size: 20px;
+                font-family: "Manrope", Arial, Helvetica, sans-serif;
+                font-weight: 700;
+                color: #111111;
+              }
+              & > p {
+                font-size: 16px;
+                font-family: "Manrope", Arial, Helvetica, sans-serif;
+                font-weight: 700;
+                color: #333333;
+                padding: 0;
+              }
+            }
+            div:nth-child(2) {
+              div {
+                display: flex;
+                flex-direction: row;
+                gap: 40px;
+                svg {
+                  width: 25px;
+                  height: 25px;
+                  transition-duration: 0.3s;
+                  transform: scale(1);
+
+                  &:hover {
+                    transform: scale(1.1);
+
+                    path {
+                      fill: #69da18;
+                    }
+                  }
+                }
+              }
+            }
+          }
         }
       }
       /* contact form */
@@ -273,6 +353,17 @@
             transform: scaleX(1);
           }
         }
+      }
+    }
+    /* google map */
+    .google-map {
+      width: 100%;
+      z-index: 1;
+      position: relative;
+      .map {
+        width: 100%;
+        border: none;
+        border-radius: 20px;
       }
     }
   }
