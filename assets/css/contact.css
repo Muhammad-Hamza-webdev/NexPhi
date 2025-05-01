@@ -1,4 +1,4 @@
-.hero-section {
+.hero-section-contact {
   background-color: #f0f2f4;
   padding: 150px 0 50px 0;
   border-radius: 0 0 20px 20px;
@@ -9,6 +9,7 @@
     background-image: url("../img/Ooze-16-3-min.webp");
     background-size: inherit;
     background-position-x: center;
+    background-size: cover;
     background-position-y: -520px;
     background-repeat: no-repeat;
     border-radius: 20px;
@@ -237,6 +238,7 @@
                 font-weight: 700;
                 color: #333333;
                 padding: 0;
+                line-height: 27px;
               }
             }
             div:nth-child(2) {
@@ -274,7 +276,7 @@
         flex-direction: column;
         gap: 30px;
 
-        h5 {
+        h3 {
           font-family: "Sora", Arial, Helvetica, sans-serif;
           font-size: 30px;
           font-weight: 400;

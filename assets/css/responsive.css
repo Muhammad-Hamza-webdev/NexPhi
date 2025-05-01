@@ -53,6 +53,12 @@
       }
     }
   }
+  /* ============= contact us page code ============ */
+  .hero-section-contact {
+    .inner-hero-section {
+      background-position-y: -290px;
+    }
+  }
 }
 
 /* =============================================================================================== */
@@ -127,6 +133,39 @@
             }
           }
         }
+      }
+    }
+  }
+
+  /* ============= contact us page code ============ */
+
+  .hero-section-contact {
+    padding: 130px 0 50px 0;
+
+    .inner-hero-section {
+      background-position-y: -290px;
+      padding: 140px 140px;
+
+      div {
+        h1 {
+          font-size: 70px;
+        }
+
+        .rotate {
+          font-size: 70px;
+          right: -125px;
+        }
+      }
+    }
+  }
+
+  /* get in touch section */
+
+  .get-in-touch {
+    .container {
+      /* main code start from here */
+      .inner-get-in-touch {
+        width: auto;
       }
     }
   }
@@ -206,6 +245,30 @@
       }
     }
   }
+
+  /* get in touch section */
+
+  .get-in-touch {
+    padding: 80px 0 50px 0;
+    .container {
+      /* main code start from here */
+      .inner-get-in-touch {
+        .contact-info {
+          h2 {
+            font-size: 50px;
+          }
+          p {
+            padding: 0;
+          }
+        }
+        /* contact form */
+        .contact-form {
+          margin: 0 0 0 50px;
+        }
+      }
+    }
+  }
+
   .footer-second-part {
     .container {
       .inner-path {
@@ -250,6 +313,31 @@
         .companies {
           h2 {
             font-size: 55px;
+          }
+        }
+      }
+    }
+  }
+
+  /* ============= contact us page code ============ */
+
+  .hero-section-contact {
+    .inner-hero-section {
+      background-position-y: -100px;
+      padding: 140px 80px;
+    }
+  }
+
+  /* get in touch section */
+
+  .get-in-touch {
+    .container {
+      /* main code start from here */
+      .inner-get-in-touch {
+        margin-bottom: 50px;
+        .contact-info {
+          h2 {
+            font-size: 40px;
           }
         }
       }
@@ -360,6 +448,67 @@
       }
     }
   }
+
+  /* ============= contact us page code ============ */
+
+  .hero-section-contact {
+    .inner-hero-section {
+      background-position-y: -50px;
+      padding: 120px 80px;
+
+      div {
+        h1 {
+          font-size: 60px;
+        }
+
+        .rotate {
+          font-size: 70px;
+          right: -125px;
+          top: 90px;
+        }
+      }
+
+      .breadcrumb {
+        right: 100px;
+      }
+    }
+  }
+
+  /* get in touch */
+  .get-in-touch {
+    .container {
+      .body-lines {
+        .body-line-l1 {
+          left: 20%;
+        }
+        .body-line-l2 {
+          display: none;
+        }
+        .body-line-r1 {
+          display: none;
+        }
+        .body-line-r2 {
+          right: 6%;
+        }
+      }
+      /* main code start from here */
+      .inner-get-in-touch {
+        flex-direction: column;
+        .contact-info {
+          width: 100%;
+        }
+        /* contact form */
+        .contact-form {
+          margin: 60px 0 0 0;
+          width: 100%;
+          form {
+            gap: 40px;
+          }
+        }
+      }
+    }
+  }
+
   /* ==== Footer ==== */
   .main-footer {
     .container {
@@ -566,6 +715,65 @@
       }
     }
   }
+  /* ============ contact page code =============*/
+  .hero-section-contact {
+    padding: 130px 0 40px 0;
+    .inner-hero-section {
+      background-position-y: 0;
+      padding: 120px 20px;
+
+      div {
+        img {
+          width: 40px;
+        }
+
+        h1 {
+          font-size: 50px;
+        }
+
+        .rotate {
+          font-size: 60px;
+          right: -110px;
+        }
+      }
+      .breadcrumb {
+        right: 70px;
+      }
+    }
+  }
+
+  /* get in touch  */
+
+  .get-in-touch {
+    padding: 50px 0 30px 0;
+    .container {
+      /* main code start from here */
+      .inner-get-in-touch {
+        .contact-info {
+          h2 {
+            font-size: 30px;
+          }
+
+          .nexphi-info {
+            flex-direction: column;
+            gap: 20px;
+            .phone {
+              width: 100%;
+            }
+            .location {
+              width: 100%;
+            }
+          }
+        }
+        /* contact form */
+        .contact-form {
+          padding: 10% 6%;
+        }
+      }
+    }
+  }
+
+  /* footer section */
   .footer-second-part {
     .container {
       .inner-path {
