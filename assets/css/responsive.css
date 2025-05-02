@@ -52,7 +52,23 @@
         }
       }
     }
+
+    /* ====cards section==== */
+
+    .inner-services-section {
+      padding: 6%;
+      .cards {
+        .card {
+          .content-container {
+            .p-24 {
+              padding: 0 14% 0 0;
+            }
+          }
+        }
+      }
+    }
   }
+
   /* ============= contact us page code ============ */
   .hero-section-contact {
     .inner-hero-section {
@@ -124,6 +140,11 @@
           }
         }
       }
+    }
+    /* ====cards section==== */
+
+    .inner-services-section {
+      padding: 6% 0 0 0;
     }
   }
 
@@ -238,6 +259,25 @@
         }
       }
     }
+
+    /* ====cards section==== */
+
+    .inner-services-section {
+      & h2 {
+        font-size: 50px;
+        padding: 0 20% 0 0;
+      }
+      .cards {
+        .card {
+          width: 33%;
+          .content-container {
+            .p-24 {
+              padding: 0 24% 0 0;
+            }
+          }
+        }
+      }
+    }
   }
 
   /* showcase section code */
@@ -346,6 +386,38 @@
         }
       }
     }
+
+    /* ====cards section==== */
+
+    .inner-services-section {
+      .cards {
+        .card {
+          .content-container {
+            .p-24 {
+              padding: 0 14% 0 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* === marquee section === */
+  .marquee {
+    .inner-marquee-section {
+      .special-text {
+        font-size: 70px;
+      }
+    }
+  }
+
+  /* === horizontal scroller section === */
+  .horizontal-scroller {
+    .scroller-container {
+      .scrolling-text {
+        font-size: 70px;
+      }
+    }
   }
 
   /* ============= contact us page code ============ */
@@ -407,6 +479,7 @@
   /* showcase section code */
   .showcase {
     gap: 2%;
+    padding: 60px 10px 30px 10px;
     .achievement {
       width: 32%;
     }
@@ -483,6 +556,43 @@
             font-size: 72px;
           }
         }
+      }
+    }
+
+    /* ====cards section==== */
+
+    .inner-services-section {
+      & h2 {
+        font-size: 50px;
+        padding: 0;
+      }
+      .cards {
+        .card {
+          width: 50%;
+          .content-container {
+            .p-24 {
+              padding: 0 4% 0 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* === marquee section === */
+  .marquee {
+    .inner-marquee-section {
+      .special-text {
+        font-size: 60px;
+      }
+    }
+  }
+
+  /* === horizontal scroller section === */
+  .horizontal-scroller {
+    .scroller-container {
+      .scrolling-text {
+        font-size: 60px;
       }
     }
   }
@@ -749,6 +859,43 @@
             font-size: 50px;
           }
         }
+      }
+    }
+
+    /* ====cards section==== */
+
+    .inner-services-section {
+      padding: 50px 0 0 0;
+      & h2 {
+        font-size: 30px;
+      }
+      .cards {
+        .card {
+          width: 100%;
+          .content-container {
+            .p-24 {
+              padding: 0 4% 0 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* === marquee section === */
+  .marquee {
+    .inner-marquee-section {
+      .special-text {
+        font-size: 50px;
+      }
+    }
+  }
+
+  /* === horizontal scroller section === */
+  .horizontal-scroller {
+    .scroller-container {
+      .scrolling-text {
+        font-size: 50px;
       }
     }
   }

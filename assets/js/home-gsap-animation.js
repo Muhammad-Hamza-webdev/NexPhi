@@ -1,21 +1,32 @@
 // Animation ======================================================================================================================================================================
 
 const text = document.querySelector(".animate-text");
-const chars = text.textContent.split("");
+const words = text.textContent.split(/(\s+)/);
 text.textContent = "";
-chars.forEach((char) => {
-  if (char === " ") {
-    text.appendChild(document.createTextNode(" "));
+
+words.forEach((word) => {
+  if (word.trim() === "") {
+    text.appendChild(document.createTextNode(word));
   } else {
-    const span = document.createElement("span");
-    span.textContent = char;
-    span.style.display = "inline-block";
-    text.appendChild(span);
+    const wordSpan = document.createElement("span");
+    wordSpan.style.display = "inline-block";
+    wordSpan.style.whiteSpace = "nowrap";
+
+    const chars = word.split("");
+    chars.forEach((char) => {
+      const charSpan = document.createElement("span");
+      charSpan.style.display = "inline-block";
+      charSpan.textContent = char;
+      wordSpan.appendChild(charSpan);
+    });
+
+    text.appendChild(wordSpan);
   }
 });
-const spans = text.querySelectorAll("span");
 
-gsap.from(spans, {
+const charSpans = text.querySelectorAll("span span");
+
+gsap.from(charSpans, {
   y: 100,
   opacity: 0,
   stagger: 0.03,
@@ -48,26 +59,41 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function prepareText(element) {
   if (element.hasPrepared) return;
-
   element.hasPrepared = true;
 
-  const chars = element.textContent.split("");
+  // Split by words (keeping spaces)
+  const words = element.textContent.split(/(\s+)/);
   element.textContent = "";
-  chars.forEach((char) => {
-    if (char === " ") {
-      element.appendChild(document.createTextNode(" "));
+
+  words.forEach((word) => {
+    if (word.trim() === "") {
+      // Handle multiple spaces
+      element.appendChild(document.createTextNode(word));
     } else {
-      const span = document.createElement("span");
-      span.textContent = char;
-      span.style.display = "inline-block";
-      element.appendChild(span);
+      // Create word container
+      const wordSpan = document.createElement("span");
+      wordSpan.style.display = "inline-block";
+      wordSpan.style.whiteSpace = "nowrap"; // Prevent word breaking
+
+      // Split word into characters
+      const chars = word.split("");
+      chars.forEach((char) => {
+        const charSpan = document.createElement("span");
+        charSpan.style.display = "inline-block";
+        charSpan.textContent = char;
+        wordSpan.appendChild(charSpan);
+      });
+
+      element.appendChild(wordSpan);
     }
   });
 }
-function animateText(element) {
-  const spans = element.querySelectorAll("span");
 
-  gsap.from(spans, {
+function animateText(element) {
+  // Get all character spans (nested inside word spans)
+  const charSpans = element.querySelectorAll("span span");
+
+  gsap.from(charSpans, {
     y: 100,
     opacity: 0,
     stagger: 0.03,
@@ -85,16 +111,13 @@ const observer = new IntersectionObserver(
       }
     });
   },
-  {
-    threshold: 0.7,
-  }
+  { threshold: 0.7 }
 );
 
 document.querySelectorAll(".animation-text-two").forEach((element) => {
   prepareText(element);
   observer.observe(element);
 });
-
 // counter 150K ======================================================================================================================================================================
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -251,3 +274,43 @@ document.addEventListener("DOMContentLoaded", function () {
 // document.addEventListener("contextmenu", function (e) {
 //   e.preventDefault();
 // });
+
+// marquee code one
+document.addEventListener("DOMContentLoaded", function () {
+  // Calculate the width of one text element
+  const textWidth = document.getElementById("marquee-text-1").offsetWidth;
+  const marquee = document.querySelector(".inner-marquee-section");
+
+  // Set the total width (same as before)
+  marquee.style.width = `${textWidth * 2 + 50}px`;
+
+  // Set INITIAL POSITION to the left (negative of one text width)
+  gsap.set(".inner-marquee-section", { x: -textWidth - 50 });
+
+  // Animate TO the right (positive movement)
+  gsap.to(".inner-marquee-section", {
+    x: 0, // Move right to original position
+    duration: 20,
+    ease: "none",
+    repeat: -1, // Infinite repeat
+  });
+});
+
+// marquee code tow
+document.addEventListener("DOMContentLoaded", function () {
+  // Calculate the width of one text element
+  const textWidth = document.getElementById("scrolling-text-1").offsetWidth;
+
+  // Set the total width of the scroller container to twice the text width
+  document.querySelector(".scroller-container").style.width = `${
+    textWidth * 2 + 50
+  }px`;
+
+  // GSAP animation
+  gsap.to(".scroller-container", {
+    x: -textWidth - 50, // Move left by the width of one text element plus padding
+    duration: 20,
+    ease: "none",
+    repeat: -1, // Infinite repeat
+  });
+});

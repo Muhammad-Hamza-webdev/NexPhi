@@ -28,6 +28,55 @@
   transform: translateY(0);
 }
 
+/* scroll down button */
+/* <reset-style> ============================ */
+a {
+  text-decoration: none;
+}
+/* <main-style> ============================ */
+.main__action {
+  position: absolute;
+  left: 5%;
+  top: 45%;
+}
+.main__scroll {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main__scroll-text {
+  color: #eceef1;
+  font-family: "Manrope", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+}
+.main__scroll-box svg {
+  width: 30px;
+  height: 30px;
+}
+.main__action:hover .main__scroll-box {
+  animation: scroll-down 3s infinite;
+}
+
+/* Animate scroll icon */
+@keyframes scroll-down {
+  0%,
+  100% {
+    transform: translateY(0rem);
+    opacity: 1;
+  }
+
+  35% {
+    transform: translateY(1rem);
+    opacity: 0;
+  }
+
+  70% {
+    transform: translateY(-1rem);
+    opacity: 0;
+  }
+}
+
 /* ================================================================hero section======================================= */
 .hero-section {
   background-color: #111111;
@@ -37,6 +86,7 @@
   border: 1px solid #111111;
   height: auto;
   padding: 220px 0 50px 0;
+  position: relative;
 
   .inner-hero-section {
     display: flex;
@@ -65,7 +115,7 @@
 /* showcase section code */
 .showcase {
   display: flex;
-  padding: 100px 10px 30px 10px;
+  padding: 170px 10px 30px 10px;
   flex-wrap: wrap;
   align-items: end;
   justify-content: center;
@@ -469,7 +519,7 @@
 .work-with {
   position: relative;
   display: flex;
-  padding: 100px 0;
+  padding: 100px 0 50x 0;
   justify-content: center;
 
   .body-lines {
@@ -545,6 +595,70 @@
       }
     }
   }
+
+  .inner-services-section {
+    padding: 6% 10%;
+    & > span {
+      font-family: "Manrope", Arial, Helvetica, sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+      color: #111111;
+    }
+    h2 {
+      font-family: "Sora", Arial, Helvetica, sans-serif;
+      font-size: 60px;
+      font-weight: 400;
+      color: #111111;
+      padding: 0 30% 0 0;
+    }
+    .cards {
+      display: flex;
+      z-index: 1;
+      position: relative;
+      width: 100%;
+      flex-wrap: wrap;
+      .card {
+        margin: 30px 0 20px 0;
+        width: 25%;
+        .icon {
+          width: 60px;
+          height: 60px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 10px;
+          background-color: #e9ebed;
+          margin-top: 20px;
+          svg {
+            width: 30px;
+            height: 30px;
+          }
+        }
+        .content-container {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          h3 {
+            font-family: "Manrope", Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            font-weight: 500;
+            color: #111111;
+          }
+          p {
+            font-family: "Manrope", Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+            color: #333333;
+            padding: 0 4% 0 0;
+            line-height: 1.875em;
+          }
+          .p-24 {
+            padding: 0 24% 0 0;
+          }
+        }
+      }
+    }
+  }
 }
 
 /* ================================================================Partner section======================================= */
@@ -574,6 +688,64 @@
           }
         }
       }
+    }
+  }
+}
+
+.marquee,
+.horizontal-scroller {
+  overflow: hidden;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+.marquee-wrapper,
+.scroller-wrapper {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* === marquee section === */
+.marquee {
+  transform: rotate(1.07deg);
+
+  .inner-marquee-section {
+    background-color: #048bc5;
+    display: flex;
+    padding: 20px 0;
+    width: fit-content;
+
+    .special-text {
+      font-family: "Sora", Arial, Helvetica, sans-serif;
+      font-size: 80px;
+      font-weight: 400;
+      color: #111111;
+      white-space: nowrap;
+      padding-right: 50px;
+      flex-shrink: 0;
+    }
+  }
+}
+
+/* === horizontal scroller section === */
+.horizontal-scroller {
+  transform: rotate(-1.07deg);
+  margin-top: -50px;
+
+  .scroller-container {
+    background-color: #111111;
+    display: flex;
+    padding: 20px 0;
+    width: fit-content;
+
+    .scrolling-text {
+      font-family: "Sora", Arial, Helvetica, sans-serif;
+      font-size: 80px;
+      font-weight: 400;
+      color: #ffffff;
+      white-space: nowrap;
+      padding-right: 50px;
+      flex-shrink: 0;
     }
   }
 }
