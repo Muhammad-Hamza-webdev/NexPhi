@@ -37,7 +37,7 @@ a {
 .main__action {
   position: absolute;
   left: 5%;
-  top: 45%;
+  top: 31.8%;
 }
 .main__scroll {
   display: flex;
@@ -720,7 +720,7 @@ a {
 
 /* === marquee section === */
 .marquee {
-  transform: rotate(1.07deg);
+  transform: rotate(2deg);
 
   .inner-marquee-section {
     background-color: #048bc5;
@@ -742,8 +742,8 @@ a {
 
 /* === horizontal scroller section === */
 .horizontal-scroller {
-  transform: rotate(-1.07deg);
-  margin-top: -50px;
+  transform: rotate(-2deg);
+  margin-top: -60px;
 
   .scroller-container {
     background-color: #111111;
@@ -759,6 +759,118 @@ a {
       white-space: nowrap;
       padding-right: 50px;
       flex-shrink: 0;
+    }
+  }
+}
+
+/* ================================================================services section======================================= */
+
+.services-section {
+  background-color: #f0f2f4;
+  padding: 140px 0 50px 0;
+  margin-top: -50px;
+  .inner-services-section {
+    & > span {
+      font-family: "Manrope", Arial, Helvetica, sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+      color: #111111;
+      padding: 0 0 0 12%;
+    }
+    h2 {
+      font-family: "Sora", Arial, Helvetica, sans-serif;
+      font-size: 60px;
+      font-weight: 400;
+      color: #111111;
+      padding: 0 30% 0 12%;
+    }
+  }
+}
+
+/* ================================================================services section======================================= */
+
+.team-section {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 100px 0 50px 0;
+
+  .body-lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+
+    .body-line {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 0;
+      border-left: solid 1px;
+      border-left-color: currentcolor;
+    }
+    .body-line-l1 {
+      border-color: #eceef1;
+      left: 5.5%;
+    }
+    .body-line-l2 {
+      border-color: #eceef1;
+      left: 40%;
+    }
+    .body-line-r1 {
+      border-color: #eceef1;
+      right: 30%;
+    }
+    .body-line-r2 {
+      border-color: #eceef1;
+      right: 11%;
+    }
+  }
+  .inner-team-section {
+    z-index: 1;
+    position: relative;
+    .team-content {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      width: 50%;
+      padding: 0 0 0 10%;
+      & > span {
+        font-family: "Manrope", Arial, Helvetica, sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        color: #111111;
+      }
+      h2 {
+        font-family: "Sora", Arial, Helvetica, sans-serif;
+        font-size: 60px;
+        font-weight: 400;
+        color: #111111;
+        padding: 0 8% 0 0;
+      }
+      & > .ani-txt {
+        background-image: linear-gradient(180deg, #69da18 0%, #048bc5 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-stroke: 2px transparent;
+        text-stroke: 2px transparent;
+        color: #ffffff;
+        font-family: "Sora", Arial, Helvetica, sans-serif;
+        font-size: 100px;
+        font-weight: 600;
+        display: block;
+        position: relative;
+        z-index: 1;
+      }
+      p {
+        font-family: "Manrope", Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        font-weight: 600;
+        color: #111111;
+      }
     }
   }
 }

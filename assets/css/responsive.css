@@ -13,6 +13,11 @@
 /* =============================================================================================== */
 
 @media (max-width: 1600px) {
+  /* scroll */
+  .main__action {
+    top: 30.6%;
+  }
+
   .left-section {
     .main-box {
       width: 25%;
@@ -89,6 +94,11 @@
 /* =============================================================================================== */
 
 @media (max-width: 1366px) {
+  /* scroll */
+  .main__action {
+    top: 31.6%;
+  }
+
   .main-header {
     display: none;
   }
@@ -178,11 +188,6 @@
         h1 {
           font-size: 70px;
         }
-
-        .rotate {
-          font-size: 70px;
-          right: -125px;
-        }
       }
     }
   }
@@ -211,11 +216,6 @@
         h1 {
           font-size: 70px;
         }
-
-        .rotate {
-          font-size: 70px;
-          right: -90px;
-        }
       }
     }
   }
@@ -226,6 +226,11 @@
 /* =============================================================================================== */
 
 @media (max-width: 1200px) {
+  /* scroll */
+  .main__action {
+    top: 29.5%;
+  }
+
   /* ====hero section==== */
   .hero-section {
     .container {
@@ -344,6 +349,11 @@
 /* =============================================================================================== */
 
 @media (max-width: 1024px) {
+  /* scroll */
+  .main__action {
+    top: 33.5%;
+  }
+
   /* ====scroll on top section==== */
 
   .scroll-to-top {
@@ -450,6 +460,11 @@
 /* =============================================================================================== */
 
 @media (max-width: 850px) {
+  /* scroll */
+  .main__action {
+    display: none;
+  }
+
   /* ====hero section==== */
   .hero-section {
     padding: 160px 0 50px 0;
@@ -598,12 +613,6 @@
         h1 {
           font-size: 60px;
         }
-
-        .rotate {
-          font-size: 70px;
-          right: -125px;
-          top: 90px;
-        }
       }
 
       .breadcrumb {
@@ -657,12 +666,6 @@
       div {
         h1 {
           font-size: 60px;
-        }
-
-        .rotate {
-          font-size: 70px;
-          right: -90px;
-          top: 90px;
         }
       }
 
@@ -918,11 +921,6 @@
         h1 {
           font-size: 50px;
         }
-
-        .rotate {
-          font-size: 60px;
-          right: -110px;
-        }
       }
       .breadcrumb {
         right: 70px;
@@ -975,11 +973,6 @@
 
         h1 {
           font-size: 50px;
-        }
-
-        .rotate {
-          font-size: 60px;
-          right: -80px;
         }
       }
       .breadcrumb {
