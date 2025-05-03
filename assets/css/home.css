@@ -482,20 +482,6 @@ a {
       font-weight: 500;
       border-top-left-radius: 20px;
       text-decoration: none;
-      & > svg:nth-child(1) {
-        position: absolute;
-        width: 30px;
-        height: 30px;
-        right: 0;
-        top: -30px;
-      }
-      & > svg:nth-child(2) {
-        position: absolute;
-        width: 30px;
-        height: 30px;
-        bottom: 0;
-        left: -30px;
-      }
 
       & > div {
         width: 300px;
@@ -509,6 +495,33 @@ a {
           width: 30px;
           height: 30px;
         }
+      }
+      &::before,
+      &::after {
+        content: "";
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        background: transparent;
+      }
+
+      &::before {
+        top: -20px;
+        right: -20px;
+        border-right: 20px solid #111111;
+        border-top: 20px solid #111111;
+        border-top-right-radius: 100px;
+        transform: rotate(90deg);
+      }
+
+      &::after {
+        bottom: -20px;
+        left: -20px;
+        border-left: 20px solid #111111;
+        border-bottom: 20px solid #111111;
+        border-bottom-left-radius: 100px;
+        transform: rotate(-90deg);
       }
     }
   }

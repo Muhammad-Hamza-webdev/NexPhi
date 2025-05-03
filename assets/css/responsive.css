@@ -337,16 +337,6 @@
       }
     }
   }
-
-  .footer-second-part {
-    .container {
-      .inner-path {
-        & > svg:nth-child(2) {
-          bottom: 43px;
-        }
-      }
-    }
-  }
 }
 
 /* =============================================================================================== */
@@ -829,18 +819,6 @@
     }
   }
 
-  /* footer second part */
-  .footer-second-part {
-    margin-top: -60px;
-    .container {
-      .inner-path {
-        align-items: center;
-        flex-direction: column-reverse;
-        gap: 20px;
-      }
-    }
-  }
-
   /* ====Work with section==== */
 
   .work-with {
@@ -1010,17 +988,19 @@
     }
   }
 
-  /* footer section */
+  /* footer second part */
   .footer-second-part {
+    margin-top: -60px;
     .container {
       .inner-path {
-        & > svg:nth-child(1) {
-          left: -30px;
-          bottom: 65px;
+        align-items: center;
+        flex-direction: column-reverse;
+        gap: 20px;
+        &::after {
+          bottom: 45px;
         }
-        & > svg:nth-child(2) {
-          right: -29px;
-          bottom: 66px;
+        &::before {
+          top: 40px;
         }
       }
     }

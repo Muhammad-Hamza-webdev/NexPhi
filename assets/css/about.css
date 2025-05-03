@@ -52,22 +52,35 @@
       height: 70px;
       border-radius: 20px 20px 0 0;
       align-content: center;
+      overflow: visible;
+      z-index: 1;
 
-      & > svg:nth-child(1) {
+      &::before,
+      &::after {
+        content: "";
+        display: inline-block;
+        width: 20px;
+        height: 20px;
         position: absolute;
-        width: 30px;
-        height: 60px;
-        bottom: -15px;
-        left: -30px;
+        background: transparent;
       }
 
-      & > svg:nth-child(2) {
-        position: absolute;
-        width: 30px;
-        height: 60px;
-        bottom: -15px;
-        right: -30px;
-        transform: rotate(-270deg);
+      &::before {
+        bottom: -20px;
+        right: -20px;
+        border-right: 20px solid #f0f2f4;
+        border-top: 20px solid #f0f2f4;
+        border-top-right-radius: 100px;
+        transform: rotate(180deg);
+      }
+
+      &::after {
+        bottom: -20px;
+        left: -20px;
+        border-left: 20px solid #f0f2f4;
+        border-bottom: 20px solid #f0f2f4;
+        border-bottom-left-radius: 100px;
+        transform: rotate(270deg);
       }
 
       ul {
