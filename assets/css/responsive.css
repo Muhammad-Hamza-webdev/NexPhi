@@ -700,6 +700,12 @@
 /* =============================================================================================== */
 
 @media (max-width: 550px) {
+  /* ====scroll on top section==== */
+
+  .scroll-to-top {
+    right: 20%;
+  }
+
   .mobile-menu {
     .mobile-menu-main {
       width: 80%;
