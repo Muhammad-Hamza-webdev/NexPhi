@@ -153,14 +153,12 @@
 
   /* ==== Footer ==== */
   .main-footer {
-    .container {
-      .inner-main-footer {
-        .footer-content {
-          .icon {
-            .text {
-              p {
-                font-size: 50px;
-              }
+    .inner-main-footer {
+      .footer-content {
+        .icon {
+          .text {
+            p {
+              font-size: 50px;
             }
           }
         }
@@ -318,6 +316,16 @@
       }
     }
   }
+
+  .main-footer {
+    .top-inner-footer {
+      .content {
+        h5 {
+          font-size: 50px;
+        }
+      }
+    }
+  }
 }
 
 /* =============================================================================================== */
@@ -415,6 +423,28 @@
         .contact-info {
           h2 {
             font-size: 40px;
+          }
+        }
+      }
+    }
+  }
+
+  /* footer */
+  .main-footer {
+    .top-inner-footer {
+      .content {
+        h5 {
+          font-size: 40px;
+        }
+      }
+    }
+    .inner-main-footer {
+      .footer-content {
+        .icon {
+          .text {
+            p {
+              font-size: 40px;
+            }
           }
         }
       }
@@ -625,16 +655,28 @@
 
   /* ==== Footer ==== */
   .main-footer {
-    .container {
-      .inner-main-footer {
-        .footer-content {
-          .icon {
-            flex: 1 1 100%;
+    .top-inner-footer {
+      padding: 80px;
+      flex-direction: column;
+      .content {
+        width: 100%;
+        h5 {
+          font-size: 50px;
+        }
+      }
+      .nav-btn {
+        width: 100%;
+      }
+    }
 
-            .text {
-              p {
-                font-size: 50px;
-              }
+    .inner-main-footer {
+      .footer-content {
+        .icon {
+          flex: 1 1 100%;
+
+          .text {
+            p {
+              font-size: 50px;
             }
           }
         }
@@ -843,17 +885,28 @@
 
   /* ==== Footer ==== */
   .main-footer {
-    .container {
-      .inner-main-footer {
-        padding: 70px 20px 70px 20px;
-        .footer-content {
-          .icon {
-            flex: 1 1 100%;
+    /* top footer */
+    .top-inner-footer {
+      padding: 80px 30px;
+      .content {
+        h5 {
+          font-size: 30px;
+        }
+      }
+      .nav-btn {
+        padding: 50px 0 0 0;
+      }
+    }
 
-            .text {
-              p {
-                font-size: 30px;
-              }
+    .inner-main-footer {
+      padding: 70px 20px 70px 20px;
+      .footer-content {
+        .icon {
+          flex: 1 1 100%;
+
+          .text {
+            p {
+              font-size: 30px;
             }
           }
         }

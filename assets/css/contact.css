@@ -57,7 +57,7 @@
         justify-content: center;
         gap: 30px;
         width: 55%;
-        span {
+        & > span {
           font-size: 16px;
           font-family: "Manrope", Arial, Helvetica, sans-serif;
           font-weight: 500;
