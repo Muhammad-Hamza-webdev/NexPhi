@@ -90,6 +90,13 @@
     }
   }
 
+  /* ====about team section==== */
+  .inner-team-section {
+    .team-content {
+      padding: 0 0 0 6%;
+    }
+  }
+
   /* ====testmoni==== */
   .testmoni {
     margin-top: 100px;
@@ -168,8 +175,8 @@
         }
       }
     }
-    /* ====cards section==== */
 
+    /* ====cards section==== */
     .inner-services-section {
       padding: 6% 0 0 0;
     }
@@ -264,7 +271,6 @@
     }
 
     /* ====cards section==== */
-
     .inner-services-section {
       & h2 {
         font-size: 50px;
@@ -358,6 +364,27 @@
             margin-top: 0;
             margin-bottom: 0;
           }
+        }
+      }
+    }
+  }
+
+  /* ====about team section==== */
+  .inner-team-section {
+    flex-direction: column;
+    .team-content {
+      width: 100%;
+    }
+    .team-profile {
+      width: 100%;
+      gap: 20px;
+      padding: 40px 0 0 0;
+
+      .card {
+        width: 23%;
+        &:nth-child(even) {
+          margin-top: 0;
+          margin-bottom: 0;
         }
       }
     }
@@ -627,7 +654,6 @@
     }
 
     /* ====cards section==== */
-
     .inner-services-section {
       & h2 {
         font-size: 50px;
@@ -641,6 +667,23 @@
               padding: 0 4% 0 0;
             }
           }
+        }
+      }
+    }
+
+    /* ====about team section==== */
+    .inner-team-section {
+      .team-content {
+        padding: 0;
+        & > h2 {
+          font-size: 50px;
+        }
+      }
+      .team-profile {
+        justify-content: space-evenly;
+
+        .card {
+          width: 50%;
         }
       }
     }
@@ -735,6 +778,7 @@
       }
     }
 
+    /* ====team section==== */
     .inner-team-section {
       .team-content {
         padding: 0;
@@ -946,7 +990,6 @@
     }
 
     /* ====cards section==== */
-
     .inner-services-section {
       padding: 50px 0 0 0;
       & h2 {
@@ -960,6 +1003,25 @@
               padding: 0 4% 0 0;
             }
           }
+        }
+      }
+    }
+
+    /* =====about team section===== */
+    .inner-team-section {
+      .team-content {
+        h2 {
+          font-size: 30px;
+        }
+        & > .ani-txt {
+          font-size: 80px;
+        }
+      }
+      .team-profile {
+        justify-content: center;
+        .card {
+          width: 100%;
+          max-width: 340px;
         }
       }
     }
