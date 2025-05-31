@@ -118,6 +118,9 @@
 /* =============================================================================================== */
 
 @media (max-width: 1366px) {
+  .pb-100 {
+    padding-bottom: 50px;
+  }
   /* scroll */
   .main__action {
     top: 31.6%;
@@ -231,6 +234,9 @@
 /* =============================================================================================== */
 
 @media (max-width: 1200px) {
+  .pb-100 {
+    padding-bottom: unset;
+  }
   /* scroll */
   .main__action {
     top: 29.5%;
@@ -1051,36 +1057,6 @@
     padding: 50px 0 0 0;
   }
 
-  /* ==== Footer ==== */
-  .main-footer {
-    /* top footer */
-    .top-inner-footer {
-      padding: 80px 30px;
-      .content {
-        h5 {
-          font-size: 30px;
-        }
-      }
-      .nav-btn {
-        padding: 50px 0 0 0;
-      }
-    }
-
-    .inner-main-footer {
-      padding: 70px 20px 70px 20px;
-      .footer-content {
-        .icon {
-          flex: 1 1 100%;
-
-          .text {
-            p {
-              font-size: 30px;
-            }
-          }
-        }
-      }
-    }
-  }
   /* ============ inner page hero section code =============*/
   .inner-page-hero-section {
     padding: 130px 0 40px 0;
@@ -1168,6 +1144,37 @@
     }
   }
 
+  /* ==== Footer ==== */
+  .main-footer {
+    /* top footer */
+    .top-inner-footer {
+      padding: 80px 30px;
+      .content {
+        h5 {
+          font-size: 30px;
+        }
+      }
+      .nav-btn {
+        padding: 50px 0 0 0;
+      }
+    }
+
+    .inner-main-footer {
+      padding: 70px 20px 100px 20px;
+      .footer-content {
+        .icon {
+          flex: 1 1 100%;
+
+          .text {
+            p {
+              font-size: 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+
   /* footer second part */
   .footer-second-part {
     margin-top: -60px;
@@ -1177,10 +1184,13 @@
         flex-direction: column-reverse;
         gap: 20px;
         &::after {
-          bottom: 45px;
+          bottom: 70px;
         }
         &::before {
           top: 40px;
+        }
+        p {
+          text-align: center;
         }
       }
     }

@@ -118,6 +118,7 @@ document.querySelectorAll(".animation-text-two").forEach((element) => {
   prepareText(element);
   observer.observe(element);
 });
+
 // counter 150K ======================================================================================================================================================================
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -214,7 +215,7 @@ window.addEventListener("load", () => {
 // New Counter 250 here ======================================================================================================================================================================
 
 document.addEventListener("DOMContentLoaded", function () {
-  const triggerScrollPercentage = 30;
+  const triggerScrollPercentage = 25;
   const animationDuration = 3000;
 
   const counterElements = document.querySelectorAll("[data-counter]");
