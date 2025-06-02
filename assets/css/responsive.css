@@ -185,16 +185,14 @@
     }
   }
 
-  /* ==== Footer ==== */
-  .main-footer {
-    .inner-main-footer {
-      .footer-content {
-        .icon {
-          .text {
-            p {
-              font-size: 50px;
-            }
-          }
+  /* ==== team ==== */
+  .team {
+    .inner-team-section {
+      .team-profile {
+        gap: 40px;
+
+        .card {
+          max-width: 280px;
         }
       }
     }
@@ -224,6 +222,21 @@
       /* main code start from here */
       .inner-get-in-touch {
         width: auto;
+      }
+    }
+  }
+
+  /* ==== Footer ==== */
+  .main-footer {
+    .inner-main-footer {
+      .footer-content {
+        .icon {
+          .text {
+            p {
+              font-size: 50px;
+            }
+          }
+        }
       }
     }
   }
@@ -396,6 +409,19 @@
     }
   }
 
+  /* ==== team ==== */
+  .team {
+    .inner-team-section {
+      .team-profile {
+        gap: 30px;
+
+        .card {
+          width: 23%;
+        }
+      }
+    }
+  }
+
   /* ====testmoni==== */
   .testmoni {
     .testmoni-card {
@@ -523,6 +549,18 @@
     .testmoni-card {
       .client-testmoni {
         width: 48.6%;
+      }
+    }
+  }
+
+  /* ==== team ==== */
+  .team {
+    .inner-team-section {
+      padding: 60px 0;
+      .team-profile {
+        .card {
+          width: 33%;
+        }
       }
     }
   }
@@ -690,6 +728,33 @@
 
         .card {
           width: 50%;
+        }
+      }
+    }
+  }
+
+  /* ==== team ==== */
+  .team {
+    .body-lines {
+      .body-line-l1 {
+        left: 20%;
+      }
+      .body-line-l2 {
+        display: none;
+      }
+      .body-line-r1 {
+        display: none;
+      }
+      .body-line-r2 {
+        right: 6%;
+      }
+    }
+
+    .inner-team-section {
+      .team-profile {
+        .card {
+          width: 50%;
+          max-width: 340px;
         }
       }
     }
@@ -1095,6 +1160,17 @@
         .card {
           width: 100%;
           max-width: 340px;
+        }
+      }
+    }
+  }
+
+  /* ==== team ==== */
+  .team {
+    .inner-team-section {
+      .team-profile {
+        .card {
+          width: 100%;
         }
       }
     }
